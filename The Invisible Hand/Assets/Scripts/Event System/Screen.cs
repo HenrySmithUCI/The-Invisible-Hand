@@ -45,7 +45,6 @@ public class Screen : MonoBehaviour {
       newButton.transform.parent = transform;
       newButton.transform.localPosition = new Vector3(-3, i * -1.5f, -1);
       newButton.screenToGoTo = currentButtons[i];
-      newButton.parentScreen = this;
       newButton.text = i.ToString();
     }
   }

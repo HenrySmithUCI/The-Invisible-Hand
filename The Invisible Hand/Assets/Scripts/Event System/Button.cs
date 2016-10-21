@@ -5,7 +5,6 @@ public class Button : MonoBehaviour {
 
   public ScreenObject screenToGoTo;
   public string text;
-  public Screen parentScreen;
 
   private TextMesh buttonText;
 
@@ -19,6 +18,6 @@ public class Button : MonoBehaviour {
   }
 
   void OnMouseDown() {
-    parentScreen.UpdateScreenObject(screenToGoTo);
+	transform.parent.GetComponent<Screen>().UpdateScreenObject(screenToGoTo);
   }
 }
