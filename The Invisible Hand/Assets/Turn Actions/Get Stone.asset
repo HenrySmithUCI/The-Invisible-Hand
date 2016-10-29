@@ -9,13 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91c57841b18fdf341b9274d6f7d46c3e, type: 3}
-  m_Name: Test Action
+  m_Name: Get Stone
   m_EditorClassIdentifier: 
   cost:
-  - resourceName: Wood
-    ammount: 1
-  - resourceName: Stone
-    ammount: 1
+  - resourceName: Gold
+    amount: 10
   produced:
-  - resourceName: Stone Sword
-    ammount: 1
+  - resourceName: Stone
+    amount: 1

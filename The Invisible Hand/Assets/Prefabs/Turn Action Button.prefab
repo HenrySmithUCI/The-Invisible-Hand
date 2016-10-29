@@ -53,6 +53,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011462699572}
+  - 114: {fileID: 114000010089241266}
+  - 61: {fileID: 61000013070859396}
   m_Layer: 0
   m_Name: Turn Action Button
   m_TagString: Untagged
@@ -93,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012357696082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.02, y: -3.109024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -166,6 +168,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012140331668}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!61 &61000013070859396
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012357696082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.93, y: 1}
 --- !u!102 &102000013165621108
 TextMesh:
   serializedVersion: 3
@@ -173,7 +189,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010335105798}
-  m_Text: Hello
+  m_Text: Sword
   m_OffsetZ: 0
   m_CharacterSize: 0.01
   m_LineSpacing: 1
@@ -187,3 +203,16 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
+--- !u!114 &114000010089241266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012357696082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f01d85eacb523b408ffd1689aef0d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 11400000, guid: 96c4d96612f921f48892dd714c53dd39, type: 2}
+  storage: {fileID: 114000011642710904, guid: a95039f492ee2194f8817b70b3a75098, type: 2}
