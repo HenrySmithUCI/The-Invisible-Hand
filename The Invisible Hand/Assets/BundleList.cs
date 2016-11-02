@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-namespace ConsoleApplication2
-{
     public class BundleList
     {
         public Dictionary<Dictionary<ResourceAmount, int>, int> Bundles;
@@ -162,4 +155,3 @@ namespace ConsoleApplication2
         }
 
     }
-}
