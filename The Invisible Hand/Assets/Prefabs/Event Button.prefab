@@ -22,7 +22,7 @@ GameObject:
   - 114: {fileID: 114000011965223262}
   - 61: {fileID: 61000011663548316}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Event Button
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,4 +216,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenToGoTo: {fileID: 0}
   text: 
-  parentScreen: {fileID: 0}
