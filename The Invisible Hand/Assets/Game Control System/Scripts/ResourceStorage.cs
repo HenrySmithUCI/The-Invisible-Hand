@@ -2,19 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ResourceStorage : MonoBehaviour {
+public class ResourceStorage : Singleton<ResourceStorage> {
 
+  protected ResourceStorage() { }
   
   public List<ResourceAmount> storage;
-
-  void Start() {
-    storage = new List<ResourceAmount>();
-  }
 
   public void addResource(string name, int amount) {
     foreach(ResourceAmount resource in storage) {
       if (resource.resourceName == name) {
         resource.amount += amount;
+        UIManager.Instance.updateResources();
         return;
       }
     }
@@ -22,7 +20,7 @@ public class ResourceStorage : MonoBehaviour {
     newResource.resourceName = name;
     newResource.amount = amount;
     storage.Add(newResource);
-    print("New resource added: " + name);
+    UIManager.Instance.updateResources();
   }
 
   public class noResourceFoundError : System.Exception { }
@@ -37,9 +35,13 @@ public class ResourceStorage : MonoBehaviour {
     throw new noResourceFoundError();
   }
 
-  public void printStorage() {
+  public string StorageString() {
+    string ret = "";
+
     foreach (ResourceAmount resource in storage) {
-      print("(" + resource.resourceName + ", " + resource.amount + ")");
+      ret += resource.resourceName + ":" + resource.amount + " ";
     }
+
+    return ret;
   }
 }
