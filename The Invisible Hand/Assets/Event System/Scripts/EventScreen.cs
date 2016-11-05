@@ -24,7 +24,7 @@ public class EventScreen : MonoBehaviour {
   void Start() {
     childText = GetComponentInChildren<TextMesh>();
     childRenderer = GetComponentInChildren<MeshRenderer>();
-    //ScreenObject sc = UpdateScreenObject(options[Random.Range(0,options.Length)]);
+    ScreenObject sc = UpdateScreenObject(options[Random.Range(0,options.Length)]);
   }
 
   public ScreenObject UpdateScreenObject(ScreenObject newCurrentScreenObject) {
