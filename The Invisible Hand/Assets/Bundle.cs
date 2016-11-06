@@ -7,8 +7,8 @@ public class Bundle
     public Dictionary<string, int> Bundle;
 
     //public List<ResourceAmount> playerStorage;
-    public List<string> resources;
-    public int minPrice;
+    private List<string> resources;
+    private int minPrice;
 
     // int lower = 1;
     //int upper = 5;
@@ -34,7 +34,7 @@ public class Bundle
 
    
 
-    public Dictionary<string, int> genBundle(int minPrice) //adds a Bundle to the list of all Bundles
+    private Dictionary<string, int> genBundle(int minPrice) //adds a Bundle to the list of all Bundles
     {
         Random rnd = new Random();
         //Dictionary<ResourceAmount,int> variationDict = new Dictionary<ResourceAmount, int>();
@@ -81,7 +81,7 @@ public class Bundle
 
    
 
-    public List<string> shuffle(List<string> lst) //shuffles a list
+    private List<string> shuffle(List<string> lst) //shuffles a list
     {
         Random rnd = new Random();
         List<string> taken = new List<string>(lst);
