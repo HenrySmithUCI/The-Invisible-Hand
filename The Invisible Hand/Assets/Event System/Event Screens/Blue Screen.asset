@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Blue Screen
   m_EditorClassIdentifier: 
   background: {r: 0, g: 0, b: 1, a: 1}
-  text: 
+  text: A man walks in to your store
   screensToConnectTo:
   - {fileID: 11400000, guid: 92755b3c79e3f4047a77486d919bbbc2, type: 2}
   - {fileID: 11400000, guid: 854207782f1195b4fb7e737e9075b009, type: 2}

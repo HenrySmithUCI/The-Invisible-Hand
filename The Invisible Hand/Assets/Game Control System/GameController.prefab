@@ -341,6 +341,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd07107a1affd904aa695cc042d155bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneInterfaces:
+  - sceneUI: {fileID: 223000013440116916, guid: 23fd00749b3d2ff4fb3561c2d45f2c92,
+      type: 2}
+    sceneName: Main Menu
+  - sceneUI: {fileID: 223000013680982592, guid: 7d69f81d70c206740aebff159909dbf1,
+      type: 2}
+    sceneName: Market Scene
+  - sceneUI: {fileID: 223000013680982592, guid: 7d69f81d70c206740aebff159909dbf1,
+      type: 2}
+    sceneName: Event Scene
   resourceBoxName: Resource Ticker
   turnBoxName: Turn Ticker
   questBoxName: 

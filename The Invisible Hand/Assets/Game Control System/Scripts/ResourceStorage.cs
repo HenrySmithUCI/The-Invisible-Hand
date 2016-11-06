@@ -8,7 +8,7 @@ public class ResourceStorage : Singleton<ResourceStorage> {
   
   public List<ResourceAmount> storage;
 
-  public void addResource(string name, int amount) {
+  public void addResource(string name, float amount) {
     foreach(ResourceAmount resource in storage) {
       if (resource.resourceName == name) {
         resource.amount += amount;
@@ -25,7 +25,7 @@ public class ResourceStorage : Singleton<ResourceStorage> {
 
   public class noResourceFoundError : System.Exception { }
 
-  public int checkResource(string name) {
+  public float checkResource(string name) {
     foreach (ResourceAmount resource in storage) {
       if (resource.resourceName == name) {
         return resource.amount;

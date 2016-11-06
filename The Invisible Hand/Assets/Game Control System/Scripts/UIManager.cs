@@ -5,6 +5,14 @@ using System.Collections;
 public class UIManager : Singleton<UIManager> {
 
   protected UIManager() { }
+  
+  [System.Serializable]
+  public class stringScene {
+    public GameObject sceneUI;
+    public string sceneName;
+  }
+
+  public stringScene[] sceneInterfaces;
 
   public string resourceBoxName;
   public string turnBoxName;
@@ -14,12 +22,7 @@ public class UIManager : Singleton<UIManager> {
   private Text turnText;
 
   void Start() {
-
-    resourcesText = GameObject.Find(resourceBoxName).GetComponentInChildren<Text>();
-    turnText = GameObject.Find(turnBoxName).GetComponentInChildren<Text>();
-
-    updateResources();
-    updateTurn();
+    updateAll();
   }
 
   public void updateResources() {
@@ -28,5 +31,29 @@ public class UIManager : Singleton<UIManager> {
 
   public void updateTurn() {
     turnText.text = TurnManager.Instance.Turn.ToString();
+  }
+
+  public void changeScene(string sceneName) {
+
+    foreach(stringScene ss in sceneInterfaces) {
+      if (ss.sceneName == sceneName) { 
+        Instantiate(ss.sceneUI);
+      }
+    }
+    updateAll();
+  }
+
+  private void updateAll() {
+
+    if (GameObject.Find(resourceBoxName) != null) {
+      resourcesText = GameObject.Find(resourceBoxName).GetComponentInChildren<Text>();
+      updateResources();
+    }
+
+    if (GameObject.Find(turnBoxName) != null) {
+      turnText = GameObject.Find(turnBoxName).GetComponentInChildren<Text>();
+      updateTurn();
+    }
+    
   }
 }

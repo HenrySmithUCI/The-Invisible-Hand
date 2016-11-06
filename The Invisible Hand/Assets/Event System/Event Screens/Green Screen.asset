@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Green Screen
   m_EditorClassIdentifier: 
   background: {r: 0, g: 1, b: 0, a: 1}
-  text: 
+  text: A lady waltzes into the store
   screensToConnectTo:
   - {fileID: 11400000, guid: d77e1984eeb9a104d94ec9cbb06dfffa, type: 2}
   - {fileID: 11400000, guid: a367a0ea30952ae4b927832053ef6a0f, type: 2}
