@@ -5,12 +5,14 @@ using System.Collections;
 
 public class PhaseManager : Singleton<PhaseManager> {
 
+  public string startPhase;
+
   public void Start() {
-    changePhase("Main Menu");
+    changePhase(startPhase);
+    SceneManager.sceneLoaded += delegate { UIManager.Instance.changeScene(SceneManager.GetActiveScene().name); };
   }
 
-  public void changePhase(string phase) {
+  public static void changePhase(string phase) {
     SceneManager.LoadScene(phase);
-    UIManager.Instance.changeScene(phase);
   }
 }

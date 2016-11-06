@@ -90,7 +90,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &551992337
+--- !u!1001 &673239465
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -129,24 +129,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013601396052, guid: e90309b6ae9e96845a4b1b97eba84b1e,
+    - target: {fileID: 114000013403600880, guid: e90309b6ae9e96845a4b1b97eba84b1e,
         type: 2}
-      propertyPath: sceneInterfaces.Array.data[1].sceneUI
-      value: 
-      objectReference: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-    - target: {fileID: 114000013601396052, guid: e90309b6ae9e96845a4b1b97eba84b1e,
-        type: 2}
-      propertyPath: sceneInterfaces.Array.data[2].sceneUI
-      value: 
-      objectReference: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-    - target: {fileID: 114000013601396052, guid: e90309b6ae9e96845a4b1b97eba84b1e,
-        type: 2}
-      propertyPath: sceneInterfaces.Array.data[0].sceneUI
-      value: 
-      objectReference: {fileID: 1000011318123532, guid: 23fd00749b3d2ff4fb3561c2d45f2c92,
-        type: 2}
+      propertyPath: startPhase
+      value: Market Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e90309b6ae9e96845a4b1b97eba84b1e, type: 2}
   m_IsPrefabParent: 0

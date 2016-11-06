@@ -87,7 +87,7 @@ public class Bundle
 
     private int genAmount(string resource)//logic for deciding the quanitity of a resource in a bundle
     {
-        int coefficent = minPrice / CostManager.Instance.priceTable[resource] ;
+        int coefficent = Mathf.CeilToInt(minPrice / CostManager.Instance.getPrice(resource));
         return UnityEngine.Random.Range(1, coefficent);
     }
 
