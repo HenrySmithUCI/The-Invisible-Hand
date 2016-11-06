@@ -8,6 +8,7 @@ public class Bundle
   
     public List<string> resources;
     public int minPrice;
+    public Dictionary<string, int> priceTable;
   
     public Bundle(List<string> resources, int minPrice)
     {
@@ -18,6 +19,14 @@ public class Bundle
 
 
 
+    }
+
+    public Bundle(List<string> resources, Dictionary<string, int> priceTable, int minPrice)
+    {
+        this.resources = new List<string>(resources);
+        this.minPrice = minPrice;
+        this.priceTable = new Dictionary<string, int>(priceTable);
+        bundle = genBundle(minPrice);
     }
 
     public Dictionary<string, int> getBundle() //ideally should be the only method called from other scripts
@@ -87,7 +96,8 @@ public class Bundle
 
     private int genAmount(string resource)//logic for deciding the quanitity of a resource in a bundle
     {
-        int coefficent = minPrice / CostManager.Instance.priceTable[resource] ;
+        //int coefficent = minPrice / CostManager.Instance.priceTable[resource] ;
+        int coefficent = minPrice / priceTable[resource];
         return UnityEngine.Random.Range(1, coefficent);
     }
 
