@@ -66,6 +66,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013504854496}
+  - 114: {fileID: 114000012732483060}
   m_Layer: 0
   m_Name: Cost Manager
   m_TagString: Untagged
@@ -157,7 +158,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013197898146}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -308,6 +309,17 @@ MonoBehaviour:
     amount: 0
   - resourceName: Gem
     amount: 0
+--- !u!114 &114000012732483060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012890984428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903d501be19bb124cb8c8cbc045e6af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013140931628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,14 +354,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneInterfaces:
-  - sceneUI: {fileID: 223000013440116916, guid: 23fd00749b3d2ff4fb3561c2d45f2c92,
-      type: 2}
+  - sceneUI: {fileID: 1000011318123532, guid: 23fd00749b3d2ff4fb3561c2d45f2c92, type: 2}
     sceneName: Main Menu
-  - sceneUI: {fileID: 223000013680982592, guid: 7d69f81d70c206740aebff159909dbf1,
-      type: 2}
+  - sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
     sceneName: Market Scene
-  - sceneUI: {fileID: 223000013680982592, guid: 7d69f81d70c206740aebff159909dbf1,
-      type: 2}
+  - sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
     sceneName: Event Scene
   resourceBoxName: Resource Ticker
   turnBoxName: Turn Ticker
