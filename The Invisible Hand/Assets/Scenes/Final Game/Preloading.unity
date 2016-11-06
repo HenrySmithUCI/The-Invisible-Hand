@@ -129,11 +129,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013403600880, guid: e90309b6ae9e96845a4b1b97eba84b1e,
-        type: 2}
-      propertyPath: startPhase
-      value: Market Scene
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e90309b6ae9e96845a4b1b97eba84b1e, type: 2}
   m_IsPrefabParent: 0
