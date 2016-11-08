@@ -36,7 +36,7 @@ public class Bundle
 
    
 
-    public Dictionary<string, int> genBundle(int minPrice) //adds a Bundle to the list of all Bundles
+    public Dictionary<string, int> genBundle(int minPrice) 
     {
         Dictionary<string, int> itemAmounts = new Dictionary<string, int>();
         resources = shuffle(resources);
@@ -55,7 +55,7 @@ public class Bundle
             }
             string resource = resources[index];
 
-            int amt = genAmount(resource);
+            int amt = genAmount(resource, priceTable);
             itemAmounts[resource] += amt;
             minPrice -= amt;
             index++;
@@ -96,9 +96,17 @@ public class Bundle
 
     private int genAmount(string resource)//logic for deciding the quanitity of a resource in a bundle
     {
-        //int coefficent = minPrice / CostManager.Instance.priceTable[resource] ;
+
+        int coefficent = Mathf.CeilToInt(minPrice / CostManager.Instance.getPrice(resource));
+        return UnityEngine.Random.Range(1, coefficent);
+
+    }
+
+    private int genAmount(string resource, Dictionary<string, int> priceTable)
+    {
         int coefficent = minPrice / priceTable[resource];
         return UnityEngine.Random.Range(1, coefficent);
+
     }
 
 }

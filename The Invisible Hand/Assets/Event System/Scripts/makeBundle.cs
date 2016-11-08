@@ -19,7 +19,7 @@ public class makeBundle : MonoBehaviour {
 
     public void showBundle(UnityEngine.UI.Button bundleButton)
     {
-        Dictionary<string, int> priceTable = CostManager.Instance.priceTable;
+        ResourceAmount[] priceTable = CostManager.Instance.priceTable;
         List<string> items = new List<string>();
         items.Add("iron");
         items.Add("wood");
@@ -30,7 +30,6 @@ public class makeBundle : MonoBehaviour {
         prices.Add("wood", 5);
         prices.Add("stone", 15);
         prices.Add("wheat", 20);
-        Debug.Log("test");
 
         Bundle bundle = new Bundle(items, prices, 100);
         string textToShow = "";

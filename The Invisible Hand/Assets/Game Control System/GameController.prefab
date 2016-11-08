@@ -58,22 +58,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000012890984428
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000013504854496}
-  - 114: {fileID: 114000012732483060}
-  m_Layer: 0
-  m_Name: Cost Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000012925722170
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012131930848}
   - 114: {fileID: 114000012614396820}
+  - 114: {fileID: 114000011153208064}
   m_Layer: 0
   m_Name: Resource Manager
   m_TagString: Untagged
@@ -169,7 +154,6 @@ Transform:
   - {fileID: 4000012906331298}
   - {fileID: 4000013235979162}
   - {fileID: 4000010771661506}
-  - {fileID: 4000013504854496}
   - {fileID: 4000013618608744}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -238,19 +222,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010383212980}
   m_RootOrder: 4
---- !u!4 &4000013504854496
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012890984428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 6
 --- !u!4 &4000013618608744
 Transform:
   m_ObjectHideFlags: 1
@@ -263,7 +234,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!4 &4000013856232982
 Transform:
   m_ObjectHideFlags: 1
@@ -277,6 +248,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010383212980}
   m_RootOrder: 2
+--- !u!114 &114000011153208064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012961601920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903d501be19bb124cb8c8cbc045e6af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceTable:
+  - resourceName: Wood
+    amount: 1
+  - resourceName: Stone
+    amount: 1
+  - resourceName: Steel
+    amount: 1
 --- !u!114 &114000012614396820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,17 +298,6 @@ MonoBehaviour:
     amount: 0
   - resourceName: Gem
     amount: 0
---- !u!114 &114000012732483060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012890984428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 903d501be19bb124cb8c8cbc045e6af2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000013140931628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46da0477989d8684685e938efc721819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPhase: Market Scene
 --- !u!114 &114000013601396052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -358,8 +337,8 @@ MonoBehaviour:
     sceneName: Main Menu
   - sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
     sceneName: Market Scene
-  - sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
-    sceneName: Event Scene
+  - sceneUI: {fileID: 1000011332634204, guid: 09da399074b8f4740ad5b453cd9a8ba9, type: 2}
+    sceneName: Market Scene
   resourceBoxName: Resource Ticker
   turnBoxName: Turn Ticker
   questBoxName: 
