@@ -11,22 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000013197898146}
   m_IsPrefabParent: 1
---- !u!1 &1000010079176428
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000013856232982}
-  - 114: {fileID: 114000014111647568}
-  m_Layer: 0
-  m_Name: Turn Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000010766793508
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +134,6 @@ Transform:
   m_Children:
   - {fileID: 4000012131930848}
   - {fileID: 4000011209224522}
-  - {fileID: 4000013856232982}
   - {fileID: 4000012906331298}
   - {fileID: 4000013235979162}
   - {fileID: 4000010771661506}
@@ -169,7 +152,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &4000011209224522
 Transform:
   m_ObjectHideFlags: 1
@@ -208,7 +191,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &4000013235979162
 Transform:
   m_ObjectHideFlags: 1
@@ -221,7 +204,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &4000013618608744
 Transform:
   m_ObjectHideFlags: 1
@@ -234,20 +217,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 6
---- !u!4 &4000013856232982
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010079176428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 2
+  m_RootOrder: 5
 --- !u!114 &114000011153208064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,23 +303,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneInterfaces:
-  - sceneUI: {fileID: 1000011318123532, guid: 23fd00749b3d2ff4fb3561c2d45f2c92, type: 2}
-    sceneName: Main Menu
-  - sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
-    sceneName: Market Scene
-  - sceneUI: {fileID: 1000011332634204, guid: 09da399074b8f4740ad5b453cd9a8ba9, type: 2}
-    sceneName: Market Scene
+  - sceneName: Main Menu
+    sceneUI: {fileID: 1000011318123532, guid: 23fd00749b3d2ff4fb3561c2d45f2c92, type: 2}
+  - sceneName: Market Scene
+    sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
+  - sceneName: Market Scene
+    sceneUI: {fileID: 1000011332634204, guid: 09da399074b8f4740ad5b453cd9a8ba9, type: 2}
+  - sceneName: Event Scene
+    sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
+  - sceneName: Event Scene
+    sceneUI: {fileID: 1000010594353648, guid: 9db5d32878bca2c40b4c12583d49e4e3, type: 2}
   resourceBoxName: Resource Ticker
   turnBoxName: Turn Ticker
   questBoxName: 
---- !u!114 &114000014111647568
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010079176428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82acde562a2ca5040b126ac3be6db717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

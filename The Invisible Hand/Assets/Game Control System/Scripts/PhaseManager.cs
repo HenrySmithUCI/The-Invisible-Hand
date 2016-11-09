@@ -6,6 +6,7 @@ using System.Collections;
 public class PhaseManager : Singleton<PhaseManager> {
 
   public string startPhase;
+  private int turn;
 
   public void Start() {
     changePhase(startPhase);
@@ -15,4 +16,11 @@ public class PhaseManager : Singleton<PhaseManager> {
   public static void changePhase(string phase) {
     SceneManager.LoadScene(phase);
   }
+
+  public void nextTurn() {
+    turn++;
+    UIManager.Instance.updateTurn();
+  }
+
+  public int Turn { get { return turn; } }
 }

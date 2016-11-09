@@ -30,7 +30,7 @@ public class UIManager : Singleton<UIManager> {
   }
 
   public void updateTurn() {
-    turnText.text = TurnManager.Instance.Turn.ToString();
+    turnText.text = PhaseManager.Instance.Turn.ToString();
   }
 
   public void changeScene(string sceneName) {
