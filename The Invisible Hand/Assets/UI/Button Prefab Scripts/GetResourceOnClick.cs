@@ -3,9 +3,9 @@ using System.Collections;
 
 public class GetResourceOnClick : SetOnClick {
 
-  public string resourceToAdd;
+  public ResourceAmount resourceAmount;
 
   protected override void action() {
-    CostManager.Instance.addOneResource(resourceToAdd);
+    CostManager.Instance.exchangeResource(resourceAmount);
   }
 }

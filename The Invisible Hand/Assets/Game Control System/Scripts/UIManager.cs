@@ -8,8 +8,8 @@ public class UIManager : Singleton<UIManager> {
   
   [System.Serializable]
   public class stringScene {
-    public GameObject sceneUI;
     public string sceneName;
+    public GameObject sceneUI;
   }
 
   public stringScene[] sceneInterfaces;
