@@ -236,6 +236,20 @@ MonoBehaviour:
     amount: 1
   - resourceName: Steel
     amount: 1
+  - resourceName: Cloth
+    amount: 1
+  - resourceName: Leather
+    amount: 1
+  - resourceName: Food
+    amount: 1
+  - resourceName: Fairy
+    amount: 1
+  - resourceName: Gem
+    amount: 1
+  availableResources:
+  - Apple
+  - Wood
+  - Cloth
 --- !u!114 &114000012614396820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,6 +327,36 @@ MonoBehaviour:
     sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
   - sceneName: Event Scene
     sceneUI: {fileID: 1000010594353648, guid: 9db5d32878bca2c40b4c12583d49e4e3, type: 2}
-  resourceBoxName: Resource Ticker
-  turnBoxName: Turn Ticker
-  questBoxName: 
+  resourceIcons:
+  - spriteName: Apple
+    color: {r: 1, g: 0, b: 0, a: 1}
+    sprite: {fileID: 21300018, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Cloth
+    color: {r: 0, g: 0, b: 1, a: 1}
+    sprite: {fileID: 21300010, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Fairy
+    color: {r: 0, g: 1, b: 1, a: 1}
+    sprite: {fileID: 21300006, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Gem
+    color: {r: 1, g: 0, b: 1, a: 1}
+    sprite: {fileID: 21300014, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Gold
+    color: {r: 1, g: 1, b: 0, a: 1}
+    sprite: {fileID: 21300002, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Herb
+    color: {r: 0, g: 1, b: 0, a: 1}
+    sprite: {fileID: 21300004, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Leather
+    color: {r: 0.547, g: 0.316, b: 0.141, a: 1}
+    sprite: {fileID: 21300008, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Steel
+    color: {r: 0.628, g: 0.627451, b: 0.627451, a: 1}
+    sprite: {fileID: 21300012, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Stone
+    color: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+    sprite: {fileID: 21300016, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Wood
+    color: {r: 0.703, g: 0.384, b: 0, a: 1}
+    sprite: {fileID: 21300000, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  iconPrefab: {fileID: 224000014083962814, guid: 15bf27fd67cdb83479f82b24683acef7,
+    type: 2}

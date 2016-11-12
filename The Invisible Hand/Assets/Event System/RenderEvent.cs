@@ -12,7 +12,7 @@ public class RenderEvent : MonoBehaviour {
 
   public void renderAs(EventObject eventObject) {
     transform.FindChild("Title").GetComponent<Text>().text = eventObject.title;
-    transform.FindChild("Front Image").GetComponent<Image>().sprite = eventObject.frontImage;
+    transform.FindChild("Event Box").FindChild("Event Image").GetComponent<Image>().sprite = eventObject.frontImage;
     transform.FindChild("Text").GetComponent<Text>().text = eventObject.text;
 
     for (int i = 0; i < 6; i++) {

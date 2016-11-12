@@ -5,6 +5,8 @@ using System.Collections;
 
 public class PhaseManager : Singleton<PhaseManager> {
 
+  protected PhaseManager() { }
+
   public string startPhase;
   private int turn;
 
