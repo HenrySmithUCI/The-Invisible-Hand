@@ -5,29 +5,32 @@ using System.Collections.Generic;
 public class Bundle
 {
     public Dictionary<string, int> bundle;
+    public int totalPrice = 0;
+
   
-    public List<string> resources;
-    public int minPrice;
-    public Dictionary<string, int> priceTable;
+    
+    
+   
   
-    public Bundle(List<string> resources, int minPrice)
+    public Bundle(List<string> resources, int minPrice) //returns item and amounts
     {
-        this.resources = new List<string>(resources);
-        this.minPrice = minPrice;
-        bundle = genBundle(minPrice);
+        
+        
+        bundle = genBundle(minPrice, resources);
 
-
+        
 
 
     }
 
-    public Bundle(List<string> resources, Dictionary<string, int> priceTable, int minPrice)
+    public int getPrice() //returns price of Bundle
     {
-        this.resources = new List<string>(resources);
-        this.minPrice = minPrice;
-        this.priceTable = new Dictionary<string, int>(priceTable);
-        bundle = genBundle(minPrice);
+        return totalPrice;
     }
+
+
+
+    
 
     public Dictionary<string, int> getBundle() //ideally should be the only method called from other scripts
     {
@@ -36,9 +39,10 @@ public class Bundle
 
    
 
-    public Dictionary<string, int> genBundle(int minPrice) 
+    public Dictionary<string, int> genBundle(int minPrice, List<string> itemTypes) 
     {
         Dictionary<string, int> itemAmounts = new Dictionary<string, int>();
+        List<string> resources = new List<string>(itemTypes);
         resources = shuffle(resources);
         foreach( string resource in resources)
         {
@@ -46,6 +50,7 @@ public class Bundle
         }
 
         int index = 0;
+
         while (minPrice >= 0)
         {
           
@@ -55,7 +60,8 @@ public class Bundle
             }
             string resource = resources[index];
 
-            int amt = genAmount(resource, priceTable);
+            int amt = genAmount(resource, minPrice);
+            totalPrice += Mathf.CeilToInt(amt * priceModify(CostManager.Instance.getPrice(resource)));
             itemAmounts[resource] += amt;
             minPrice -= amt;
             index++;
@@ -94,19 +100,20 @@ public class Bundle
 
     }
 
-    private int genAmount(string resource)//logic for deciding the quanitity of a resource in a bundle
+    private int genAmount(string resource, int minPrice)//logic for deciding the quanitity of a resource in a bundle
     {
 
         int coefficent = Mathf.CeilToInt(minPrice / CostManager.Instance.getPrice(resource));
-        return UnityEngine.Random.Range(1, coefficent);
+        int amt = UnityEngine.Random.Range(1, coefficent);
+        return amt;
 
     }
 
-    private int genAmount(string resource, Dictionary<string, int> priceTable)
+    private float priceModify(float amount)
     {
-        int coefficent = minPrice / priceTable[resource];
-        return UnityEngine.Random.Range(1, coefficent);
-
+        return amount / 2;
     }
+
+    
 
 }
