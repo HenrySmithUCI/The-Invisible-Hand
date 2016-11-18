@@ -7,10 +7,12 @@ public class TurnActionButton : MonoBehaviour {
 
   private ResourceStorage storage;
 
+  //sets the private variable called storage which will hold all the resource information
   void Start() {
     storage = ResourceStorage.Instance;
   }
 
+  //everytime the mouse is clicked the resource if the user has the required material is incremented
   public void OnMouseDown() {
 
     try {

@@ -10,7 +10,7 @@ public class MakeMarketUI : MonoBehaviour {
   private RectTransform rectTransform;
 
 	void Start () {
-    print("hoi");
+    print("hoi"); //lol
     rectTransform = GetComponent<RectTransform>();
 
     makeResourceButtons();

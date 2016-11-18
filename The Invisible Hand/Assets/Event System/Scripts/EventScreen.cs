@@ -26,7 +26,8 @@ public class EventScreen : MonoBehaviour {
     childRenderer = GetComponentInChildren<MeshRenderer>();
     UpdateScreenObject(options[Random.Range(0,options.Length)]);
   }
-
+  
+  //updates the variables corresponding to the background color/text/list of buttons
   public ScreenObject UpdateScreenObject(ScreenObject newCurrentScreenObject) {
     currentColor = newCurrentScreenObject.background;
     currentText = newCurrentScreenObject.text;
@@ -35,7 +36,8 @@ public class EventScreen : MonoBehaviour {
     UpdateLook();
     return newCurrentScreenObject;
   }
-
+  
+  //changes the actual scene corresponding to the updated variables
   void UpdateLook() {
     childText.text = currentText;
     childRenderer.material.color = currentColor;

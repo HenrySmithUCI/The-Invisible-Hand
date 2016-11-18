@@ -6,8 +6,10 @@ public class CostManager : Singleton<CostManager> {
 
   protected CostManager() { }
 
+  //initializes an array of the class ResourceAmount
   public ResourceAmount[] priceTable;
 
+  //returns the total price of a resource
   public float getPrice(string resource) {
     foreach (ResourceAmount re in priceTable) {
       if (re.resourceName == resource) {
@@ -16,7 +18,8 @@ public class CostManager : Singleton<CostManager> {
     }
     throw new System.Exception("Cannot get price of " + resource + "because it does not exist yet!");
   }
-
+  
+  //increments the specificed resource by one
   public void addOneResource(string resource) {
     ResourceStorage.Instance.addResource(resource, 1);
   }
