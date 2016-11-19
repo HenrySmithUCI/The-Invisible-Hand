@@ -46,22 +46,24 @@ public class UIManager : Singleton<UIManager> {
   public void updateResources() {
     RectTransform resourceBox = GameObject.Find("Resource Ticker").GetComponent<RectTransform>();
 
-    for (int i = 0; i < resourceBox.childCount; i++) {
-      resourceBox.GetChild(i).gameObject.SetActive(false);
+    for(int i = 0; i < resourceBox.childCount; i++) {
+      ResourceDisplay rd = resourceBox.GetChild(i).GetComponent<ResourceDisplay>();
+      if (CostManager.Instance.availableResources.Contains(rd.resource)) {
+        rd.display = true;
+        if (rd.resource != "") {
+          rd.amount = Mathf.FloorToInt(ResourceStorage.Instance.checkResource(rd.resource));
+          rd.updateDisplay();
+        }
+      }
+      else {
+        rd.display = false;
+      }
+      
+      
     }
+  }
 
-    RectTransform box = resourceBox.Find("Gold").GetComponent<RectTransform>();
-    box.gameObject.SetActive(true);
-    makeResourceIconImage("Gold", new Rect(0, 0, 1, 1), box.Find("Icon").GetComponent<RectTransform>());
-    box.Find("Amount").GetComponent<Text>().text = Mathf.FloorToInt(ResourceStorage.Instance.checkResource("Gold")).ToString();
-
-    foreach (string resource in CostManager.Instance.availableResources) {
-      box = resourceBox.Find(resource).GetComponent<RectTransform>();
-      box.gameObject.SetActive(true);
-      makeResourceIconImage(resource, new Rect(0, 0, 1, 1), box.Find("Icon").GetComponent<RectTransform>());
-      box.Find("Amount").GetComponent<Text>().text = Mathf.FloorToInt(ResourceStorage.Instance.checkResource(resource)).ToString();
-    }
-    
+  public void displayQuest(QuestObject quest, RectTransform questBox) {
 
   }
 

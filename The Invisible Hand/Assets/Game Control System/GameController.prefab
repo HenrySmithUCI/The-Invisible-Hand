@@ -114,6 +114,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013235979162}
+  - 114: {fileID: 114000013053296652}
   m_Layer: 0
   m_Name: Quest Manager
   m_TagString: Untagged
@@ -282,6 +283,18 @@ MonoBehaviour:
     amount: 0
   - resourceName: Gem
     amount: 0
+--- !u!114 &114000013053296652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013427765964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f32e53628832d43a334531ebf4ba16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuests: []
 --- !u!114 &114000013140931628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -358,5 +371,8 @@ MonoBehaviour:
   - spriteName: Wood
     color: {r: 0.703, g: 0.384, b: 0, a: 1}
     sprite: {fileID: 21300000, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Reputation
+    color: {r: 0, g: 0.703, b: 0.3830137, a: 1}
+    sprite: {fileID: 21300020, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
   iconPrefab: {fileID: 224000014083962814, guid: 15bf27fd67cdb83479f82b24683acef7,
     type: 2}

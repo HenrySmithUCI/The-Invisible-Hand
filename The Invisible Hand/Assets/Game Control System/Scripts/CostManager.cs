@@ -7,7 +7,7 @@ public class CostManager : Singleton<CostManager> {
   protected CostManager() { }
 
   public ResourceAmount[] priceTable;
-  public string[] availableResources;
+  public List<string> availableResources;
 
   public float getPrice(string resource) {
     foreach (ResourceAmount re in priceTable) {

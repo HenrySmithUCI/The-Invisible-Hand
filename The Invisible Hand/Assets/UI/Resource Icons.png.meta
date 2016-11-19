@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4d83917c6c82e9846be65ae1b1e60f86
-timeCreated: 1478953222
+timeCreated: 1478989541
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,7 @@ TextureImporter:
     21300014: Gem
     21300016: Stone
     21300018: Apple
+    21300020: Reputation
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -187,6 +188,19 @@ TextureImporter:
         y: 29
         width: 9
         height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Reputation
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 3
+        width: 5
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

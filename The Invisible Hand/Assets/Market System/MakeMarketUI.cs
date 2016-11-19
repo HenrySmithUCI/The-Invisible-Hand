@@ -13,7 +13,7 @@ public class MakeMarketUI : MonoBehaviour {
 	}
 
   void makeResourceButtons() {
-    for (int i = 0; i < CostManager.Instance.availableResources.Length; i++) {
+    for (int i = 0; i < CostManager.Instance.availableResources.Count; i++) {
       string resource = CostManager.Instance.availableResources[i];
       RectTransform rt = Instantiate(resourceButtonPrefab).GetComponent<RectTransform>();
 
