@@ -5,11 +5,20 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
+public class TurnDependentArray
+{
+
+    public List<EventObject> events;
+
+
+}
 public class EventStorage : MonoBehaviour
 {
 
     //td: turn dependent , ti: turn independent. Creative I know
-    public List<EventObject>[] tdEvents;
+
+    public TurnDependentArray[] tdEvents;
     public List<EventObject> tiEvents;
 
 
@@ -38,7 +47,7 @@ public class EventStorage : MonoBehaviour
 
     public List<EventObject> GetQuestSet(int turn, int maxEvents)
     {
-        List<EventObject> reqEvents = new List<EventObject>(tdEvents[turn]); //should be a deep copy
+        List<EventObject> reqEvents = new List<EventObject>(tdEvents[turn].events); //should be a deep copy
         if (maxEvents > reqEvents.Count)
         {
 

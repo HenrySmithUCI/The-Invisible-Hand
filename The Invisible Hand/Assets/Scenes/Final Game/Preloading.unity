@@ -304,6 +304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4114eed6166a224db1b75e461b48240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tdEvents:
+  - events: []
+  - events: []
+  - events: []
   tiEvents:
   - {fileID: 0}
   - {fileID: 0}
