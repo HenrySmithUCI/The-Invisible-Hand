@@ -17,6 +17,7 @@ public class makeBundle : MonoBehaviour {
 
     }
 
+    //simulates a bundle UI being generated
     public void showBundle(UnityEngine.UI.Button bundleButton)
     {
         ResourceAmount[] priceTable = CostManager.Instance.priceTable;

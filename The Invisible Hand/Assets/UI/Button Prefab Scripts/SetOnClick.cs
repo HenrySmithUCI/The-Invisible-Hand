@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+//**not really sure what this does
 public class SetOnClick : MonoBehaviour {
 
   private Button button;

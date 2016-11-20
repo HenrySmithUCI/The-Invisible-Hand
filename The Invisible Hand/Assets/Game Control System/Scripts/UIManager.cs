@@ -2,16 +2,19 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+//class that is in charge of the game's UI
 public class UIManager : Singleton<UIManager> {
 
   protected UIManager() { }
   
   [System.Serializable]
+  //creates the GameObject called sceneUI and the corresponding scene name
   public class stringScene {
     public string sceneName;
     public GameObject sceneUI;
   }
 
+<<<<<<< HEAD
   [System.Serializable]
   public class stringSprite {
     public string spriteName;
@@ -22,10 +25,24 @@ public class UIManager : Singleton<UIManager> {
   public stringScene[] sceneInterfaces;
   public stringSprite[] resourceIcons;
   public RectTransform iconPrefab;
+=======
+  //list of available scenes
+  public stringScene[] sceneInterfaces;
+
+  //the following block of statements creates the names of each box in the UI
+  public string resourceBoxName;
+  public string turnBoxName;
+  public string questBoxName;
+
+  //creates Text objects for the resources name/amount and turn count
+  private Text resourcesText;
+  private Text turnText;
+>>>>>>> origin/master
 
   void Start() {
     updateAll();
   }
+<<<<<<< HEAD
 
   public void makeResourceIconImage(string resource, Rect AnchorPos, RectTransform parent) {
     foreach(stringSprite ss in resourceIcons) {
@@ -43,6 +60,10 @@ public class UIManager : Singleton<UIManager> {
     }
   }
 
+=======
+ 
+  //updates the UI dealing with resources, everytime the storage variable in the ResourceStorage class is changed
+>>>>>>> origin/master
   public void updateResources() {
     RectTransform resourceBox = GameObject.Find("Resource Ticker").GetComponent<RectTransform>();
 
@@ -67,6 +88,7 @@ public class UIManager : Singleton<UIManager> {
 
   }
 
+  //updates the UI dealing with the turn counter, everytime the turn variable in TurnManager class is changed
   public void updateTurn() {
     GameObject.Find("Turn Ticker").GetComponentInChildren<Text>().text = PhaseManager.Instance.Turn.ToString();
   }
@@ -75,6 +97,7 @@ public class UIManager : Singleton<UIManager> {
 
   }
 
+  //accesses the list of available scenes and if the input sceneName matches the scene found in the list, the UI updates
   public void changeScene(string sceneName) {
 
     foreach(stringScene ss in sceneInterfaces) {
@@ -85,6 +108,7 @@ public class UIManager : Singleton<UIManager> {
     updateAll();
   }
 
+  //on start the given resource list and turn count will be updated
   private void updateAll() {
 
     if (GameObject.Find("Resource Ticker") != null) {

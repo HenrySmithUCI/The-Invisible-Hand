@@ -5,16 +5,22 @@ using System.Collections;
 
 public class PhaseManager : Singleton<PhaseManager> {
 
+<<<<<<< HEAD
   protected PhaseManager() { }
 
+=======
+  //initializes the string startPhase
+>>>>>>> origin/master
   public string startPhase;
   private int turn;
 
+  //on start the scene is set based on the given startPhase string
   public void Start() {
     changePhase(startPhase);
     SceneManager.sceneLoaded += delegate { UIManager.Instance.changeScene(SceneManager.GetActiveScene().name); };
   }
-
+  
+  //loads the scene specified by the given input
   public static void changePhase(string phase) {
     SceneManager.LoadScene(phase);
   }
