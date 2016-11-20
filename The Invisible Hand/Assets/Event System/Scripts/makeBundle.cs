@@ -26,11 +26,11 @@ public class makeBundle : MonoBehaviour {
         items.Add("wood");
         items.Add("stone");
         items.Add("wheat");
-        Dictionary<string, int> prices = new Dictionary<string, int>();
+       /* Dictionary<string, int> prices = new Dictionary<string, int>();
         prices.Add("iron", 10);
         prices.Add("wood", 5);
         prices.Add("stone", 15);
-        prices.Add("wheat", 20);
+        prices.Add("wheat", 20);*/
 
         Bundle bundle = new Bundle(items, 100);
         string textToShow = "";
@@ -39,6 +39,8 @@ public class makeBundle : MonoBehaviour {
             string amt = (bundle.getBundle()[item]).ToString();
             textToShow += item + ":" + amt;
         }
+
+        textToShow += "total price: " + bundle.getPrice();
         
         bundleButton.GetComponentInChildren<Text>().text = textToShow;
 
