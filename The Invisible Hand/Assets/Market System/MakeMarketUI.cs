@@ -8,12 +8,6 @@ public class MakeMarketUI : MonoBehaviour {
   public CanvasRenderer bundleButtonPrefab;
 
 	void Start () {
-<<<<<<< HEAD
-=======
-    print("hoi"); //lol
-    rectTransform = GetComponent<RectTransform>();
-
->>>>>>> origin/master
     makeResourceButtons();
     makeBundleButtons();
 	}

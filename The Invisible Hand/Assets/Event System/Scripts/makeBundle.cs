@@ -20,7 +20,7 @@ public class makeBundle : MonoBehaviour {
     //simulates a bundle UI being generated
     public void showBundle(UnityEngine.UI.Button bundleButton)
     {
-        ResourceAmount[] priceTable = CostManager.Instance.priceTable;
+        //ResourceAmount[] priceTable = CostManager.Instance.priceTable;
         List<string> items = new List<string>();
         items.Add("iron");
         items.Add("wood");

@@ -5,12 +5,9 @@ using System.Collections;
 
 public class PhaseManager : Singleton<PhaseManager> {
 
-<<<<<<< HEAD
   protected PhaseManager() { }
 
-=======
   //initializes the string startPhase
->>>>>>> origin/master
   public string startPhase;
   private int turn;
 

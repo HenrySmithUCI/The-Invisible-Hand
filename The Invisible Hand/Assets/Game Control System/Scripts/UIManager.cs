@@ -13,8 +13,6 @@ public class UIManager : Singleton<UIManager> {
     public string sceneName;
     public GameObject sceneUI;
   }
-
-<<<<<<< HEAD
   [System.Serializable]
   public class stringSprite {
     public string spriteName;
@@ -22,12 +20,10 @@ public class UIManager : Singleton<UIManager> {
     public Sprite sprite;
   }
 
+  //list of available scenes
   public stringScene[] sceneInterfaces;
   public stringSprite[] resourceIcons;
   public RectTransform iconPrefab;
-=======
-  //list of available scenes
-  public stringScene[] sceneInterfaces;
 
   //the following block of statements creates the names of each box in the UI
   public string resourceBoxName;
@@ -37,12 +33,10 @@ public class UIManager : Singleton<UIManager> {
   //creates Text objects for the resources name/amount and turn count
   private Text resourcesText;
   private Text turnText;
->>>>>>> origin/master
 
   void Start() {
     updateAll();
   }
-<<<<<<< HEAD
 
   public void makeResourceIconImage(string resource, Rect AnchorPos, RectTransform parent) {
     foreach(stringSprite ss in resourceIcons) {
@@ -60,10 +54,8 @@ public class UIManager : Singleton<UIManager> {
     }
   }
 
-=======
  
   //updates the UI dealing with resources, everytime the storage variable in the ResourceStorage class is changed
->>>>>>> origin/master
   public void updateResources() {
     RectTransform resourceBox = GameObject.Find("Resource Ticker").GetComponent<RectTransform>();
 
