@@ -31,7 +31,7 @@ public class makeBundle : MonoBehaviour {
         prices.Add("stone", 15);
         prices.Add("wheat", 20);
 
-        Bundle bundle = new Bundle(items, prices, 100);
+        Bundle bundle = new Bundle(items, 100);
         string textToShow = "";
         foreach (string item in bundle.getBundle().Keys)
         {
