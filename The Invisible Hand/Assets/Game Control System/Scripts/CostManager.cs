@@ -7,6 +7,7 @@ public class CostManager : Singleton<CostManager> {
   protected CostManager() { }
 
   public ResourceAmount[] priceTable;
+  public List<string> availableResources;
 
   public float getPrice(string resource) {
     foreach (ResourceAmount re in priceTable) {
@@ -17,7 +18,7 @@ public class CostManager : Singleton<CostManager> {
     throw new System.Exception("Cannot get price of " + resource + "because it does not exist yet!");
   }
 
-  public void addOneResource(string resource) {
-    ResourceStorage.Instance.addResource(resource, 1);
+  public void exchangeResource(ResourceAmount resourceAmount) {
+    ResourceStorage.Instance.addResource(resourceAmount.resourceName, resourceAmount.amount);
   }
 }

@@ -11,22 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000013197898146}
   m_IsPrefabParent: 1
---- !u!1 &1000010079176428
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000013856232982}
-  - 114: {fileID: 114000014111647568}
-  m_Layer: 0
-  m_Name: Turn Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000010766793508
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +114,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013235979162}
+  - 114: {fileID: 114000013053296652}
   m_Layer: 0
   m_Name: Quest Manager
   m_TagString: Untagged
@@ -150,7 +135,6 @@ Transform:
   m_Children:
   - {fileID: 4000012131930848}
   - {fileID: 4000011209224522}
-  - {fileID: 4000013856232982}
   - {fileID: 4000012906331298}
   - {fileID: 4000013235979162}
   - {fileID: 4000010771661506}
@@ -169,7 +153,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &4000011209224522
 Transform:
   m_ObjectHideFlags: 1
@@ -208,7 +192,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &4000013235979162
 Transform:
   m_ObjectHideFlags: 1
@@ -221,7 +205,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &4000013618608744
 Transform:
   m_ObjectHideFlags: 1
@@ -234,20 +218,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 6
---- !u!4 &4000013856232982
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010079176428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000010383212980}
-  m_RootOrder: 2
+  m_RootOrder: 5
 --- !u!114 &114000011153208064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,6 +237,20 @@ MonoBehaviour:
     amount: 1
   - resourceName: Steel
     amount: 1
+  - resourceName: Cloth
+    amount: 1
+  - resourceName: Leather
+    amount: 1
+  - resourceName: Food
+    amount: 1
+  - resourceName: Fairy
+    amount: 1
+  - resourceName: Gem
+    amount: 1
+  availableResources:
+  - Apple
+  - Wood
+  - Cloth
 --- !u!114 &114000012614396820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -298,6 +283,18 @@ MonoBehaviour:
     amount: 0
   - resourceName: Gem
     amount: 0
+--- !u!114 &114000013053296652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013427765964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f32e53628832d43a334531ebf4ba16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuests: []
 --- !u!114 &114000013140931628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,23 +330,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneInterfaces:
-  - sceneUI: {fileID: 1000011318123532, guid: 23fd00749b3d2ff4fb3561c2d45f2c92, type: 2}
-    sceneName: Main Menu
-  - sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
-    sceneName: Market Scene
-  - sceneUI: {fileID: 1000011332634204, guid: 09da399074b8f4740ad5b453cd9a8ba9, type: 2}
-    sceneName: Market Scene
-  resourceBoxName: Resource Ticker
-  turnBoxName: Turn Ticker
-  questBoxName: 
---- !u!114 &114000014111647568
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010079176428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82acde562a2ca5040b126ac3be6db717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  - sceneName: Main Menu
+    sceneUI: {fileID: 1000011318123532, guid: 23fd00749b3d2ff4fb3561c2d45f2c92, type: 2}
+  - sceneName: Market Scene
+    sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
+  - sceneName: Market Scene
+    sceneUI: {fileID: 1000011332634204, guid: 09da399074b8f4740ad5b453cd9a8ba9, type: 2}
+  - sceneName: Event Scene
+    sceneUI: {fileID: 1000011974070786, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
+  - sceneName: Event Scene
+    sceneUI: {fileID: 1000010594353648, guid: 9db5d32878bca2c40b4c12583d49e4e3, type: 2}
+  resourceIcons:
+  - spriteName: Apple
+    color: {r: 1, g: 0, b: 0, a: 1}
+    sprite: {fileID: 21300018, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Cloth
+    color: {r: 0, g: 0, b: 1, a: 1}
+    sprite: {fileID: 21300010, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Fairy
+    color: {r: 0, g: 1, b: 1, a: 1}
+    sprite: {fileID: 21300006, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Gem
+    color: {r: 1, g: 0, b: 1, a: 1}
+    sprite: {fileID: 21300014, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Gold
+    color: {r: 1, g: 1, b: 0, a: 1}
+    sprite: {fileID: 21300002, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Herb
+    color: {r: 0, g: 1, b: 0, a: 1}
+    sprite: {fileID: 21300004, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Leather
+    color: {r: 0.547, g: 0.316, b: 0.141, a: 1}
+    sprite: {fileID: 21300008, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Steel
+    color: {r: 0.628, g: 0.627451, b: 0.627451, a: 1}
+    sprite: {fileID: 21300012, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Stone
+    color: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+    sprite: {fileID: 21300016, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Wood
+    color: {r: 0.703, g: 0.384, b: 0, a: 1}
+    sprite: {fileID: 21300000, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Reputation
+    color: {r: 0, g: 0.703, b: 0.3830137, a: 1}
+    sprite: {fileID: 21300020, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  iconPrefab: {fileID: 224000014083962814, guid: 15bf27fd67cdb83479f82b24683acef7,
+    type: 2}
