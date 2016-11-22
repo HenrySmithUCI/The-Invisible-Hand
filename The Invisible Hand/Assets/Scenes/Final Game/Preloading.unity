@@ -90,7 +90,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &209325477
+--- !u!1001 &1174760305
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -187,66 +187,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012262851226, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: display
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &209325478 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012814554758, guid: 7d69f81d70c206740aebff159909dbf1,
-    type: 2}
-  m_PrefabInternal: {fileID: 209325477}
---- !u!1 &209325479 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000014069704416, guid: 7d69f81d70c206740aebff159909dbf1,
-    type: 2}
-  m_PrefabInternal: {fileID: 209325477}
---- !u!114 &209325480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 209325478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512a7cfc9e8fd064095b21e0150229f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 0}
---- !u!114 &209325481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 209325479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512a7cfc9e8fd064095b21e0150229f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 0}
---- !u!1 &1849436590 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012898712638, guid: 7d69f81d70c206740aebff159909dbf1,
-    type: 2}
-  m_PrefabInternal: {fileID: 209325477}
---- !u!114 &1849436591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1849436590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512a7cfc9e8fd064095b21e0150229f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 0}
---- !u!1001 &2003661245
+--- !u!1001 &2073980986
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -288,27 +232,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e90309b6ae9e96845a4b1b97eba84b1e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2003661246 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011887255178, guid: e90309b6ae9e96845a4b1b97eba84b1e,
-    type: 2}
-  m_PrefabInternal: {fileID: 2003661245}
---- !u!114 &2003661247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2003661246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4114eed6166a224db1b75e461b48240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tdEvents:
-  - events: []
-  - events: []
-  - events: []
-  tiEvents:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[CreateAssetMenu(fileName = "Event")]
+//[CreateAssetMenu(fileName = "Event")]
 public class EventObject : ScriptableObject {
 
   public string title;

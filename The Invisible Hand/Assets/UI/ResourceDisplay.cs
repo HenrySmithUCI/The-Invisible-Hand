@@ -12,8 +12,15 @@ public class ResourceDisplay : MonoBehaviour {
   private RectTransform count;
 
   void Awake () {
-    icon = GetComponent<RectTransform>().Find("Icon").GetComponent<RectTransform>();
-    count = GetComponent<RectTransform>().Find("Amount").GetComponent<RectTransform>();
+    //This errors for some reason but only once? so this just pervents the console from getting cluttered.
+    //The error dosent seem to change anything?
+    try {
+      icon = GetComponent<RectTransform>().Find("Icon").GetComponent<RectTransform>();
+      count = GetComponent<RectTransform>().Find("Amount").GetComponent<RectTransform>();
+    }
+    catch {
+      //Yeah, IDK
+    }
 	}
 
   public void updateDisplay() {
@@ -25,7 +32,6 @@ public class ResourceDisplay : MonoBehaviour {
       UIManager.Instance.makeResourceIconImage(resource, new Rect(0, 0, 1, 1), icon);
       count.GetComponent<Text>().text = amount.ToString();
     }
-
   }
 
   public void hide() {

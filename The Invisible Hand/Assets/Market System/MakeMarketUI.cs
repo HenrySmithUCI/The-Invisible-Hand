@@ -17,15 +17,23 @@ public class MakeMarketUI : MonoBehaviour {
       string resource = CostManager.Instance.availableResources[i];
       RectTransform rt = Instantiate(resourceButtonPrefab).GetComponent<RectTransform>();
 
-      rt.SetParent(this.GetComponent<RectTransform>());
+      Vector2 trCorner = new Vector2(0.13f, 0.88f);
+      Vector2 rectSize = new Vector2(0.33f, 0.07f);
+      float spacer = 0.02f;
 
-      rt.anchorMin = new Vector2(0.13f, 0.83f - (i * 0.07f));
-      rt.anchorMax = new Vector2(0.37f, 0.88f - (i * 0.07f));
-      rt.offsetMax = new Vector2(0, 0);
-      rt.offsetMin = new Vector2(0, 0);
+      Rect r = new Rect();
+      r.xMin = trCorner.x;
+      r.yMin = (trCorner.y - rectSize.y) - (i * (spacer + rectSize.y));
+      r.xMax = trCorner.x + rectSize.x;
+      r.yMax = trCorner.y - (i * (spacer + rectSize.y));
 
-      UIManager.Instance.makeResourceIconImage(resource, new Rect(0,0,1,1),rt.Find("Cost Text").Find("Icon").GetComponent<RectTransform>());
-      rt.Find("Cost Text").GetComponentInChildren<Text>().text = string.Format("{0}G", CostManager.Instance.priceTable[i].amount);
+      UIManager.Instance.seatInside(this.GetComponent<RectTransform>(), rt, r);
+
+      RectTransform rdReceive = rt.Find("Cost Text").Find("Receive").GetComponent<RectTransform>();
+      RectTransform rdGive = rt.Find("Cost Text").Find("Give").GetComponent<RectTransform>();
+
+      UIManager.Instance.makeResourceDisplay(resource, 1, new Rect(0,0,1,1), rdReceive);
+      UIManager.Instance.makeResourceDisplay("Gold", 0, new Rect(0, 0, 1, 1), rdGive);
 
       rt.Find("Buy Button").GetComponent<GetResourceOnClick>().resourceAmount = new ResourceAmount(resource, 1);
       rt.Find("Sell Button").GetComponent<GetResourceOnClick>().resourceAmount = new ResourceAmount(resource, -1);

@@ -13,8 +13,8 @@ public class PhaseManager : Singleton<PhaseManager> {
 
   //on start the scene is set based on the given startPhase string
   public void Start() {
-    changePhase(startPhase);
     SceneManager.sceneLoaded += delegate { UIManager.Instance.changeScene(SceneManager.GetActiveScene().name); };
+    changePhase(startPhase);
   }
   
   //loads the scene specified by the given input

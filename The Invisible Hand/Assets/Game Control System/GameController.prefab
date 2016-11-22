@@ -251,6 +251,12 @@ MonoBehaviour:
   - Apple
   - Wood
   - Cloth
+  - Steel
+  - Stone
+  - Fairy
+  - Herb
+  - Leather
+  - Gem
 --- !u!114 &114000012614396820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,7 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f32e53628832d43a334531ebf4ba16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentQuests: []
+  currentQuests:
+  - {fileID: 11400000, guid: 51f7859e24c494c4abd869ae40f9ecbb, type: 2}
+  - {fileID: 11400000, guid: b89f64b66aa7afb47926310915a4794b, type: 2}
 --- !u!114 &114000013140931628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,5 +382,6 @@ MonoBehaviour:
   - spriteName: Reputation
     color: {r: 0, g: 0.703, b: 0.3830137, a: 1}
     sprite: {fileID: 21300020, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
-  iconPrefab: {fileID: 224000014083962814, guid: 15bf27fd67cdb83479f82b24683acef7,
+  emptyPrefab: {fileID: 224000014083962814, guid: 15bf27fd67cdb83479f82b24683acef7,
     type: 2}
+  rdPrefab: {fileID: 114000011586007420, guid: 0926ddc6b0df3ff42865c16d0d8b7bc6, type: 2}
