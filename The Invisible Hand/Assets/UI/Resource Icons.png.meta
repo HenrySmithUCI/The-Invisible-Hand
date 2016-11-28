@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4d83917c6c82e9846be65ae1b1e60f86
-timeCreated: 1478989541
+timeCreated: 1480309163
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,7 @@ TextureImporter:
     21300016: Stone
     21300018: Apple
     21300020: Reputation
+    21300022: Turn
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -68,9 +69,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 41
+        y: 39
         width: 16
-        height: 12
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -80,10 +81,10 @@ TextureImporter:
       name: Gold
       rect:
         serializedVersion: 2
-        x: 4
+        x: 2
         y: 24
-        width: 8
-        height: 13
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -93,9 +94,9 @@ TextureImporter:
       name: Herb
       rect:
         serializedVersion: 2
-        x: 19
+        x: 18
         y: 2
-        width: 10
+        width: 13
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -107,9 +108,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 17
+        y: 16
         width: 12
-        height: 8
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,9 +121,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 16
+        y: 15
         width: 10
-        height: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,9 +147,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 37
-        y: 28
+        y: 27
         width: 16
-        height: 12
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,10 +159,10 @@ TextureImporter:
       name: Gem
       rect:
         serializedVersion: 2
-        x: 47
-        y: 43
-        width: 11
-        height: 11
+        x: 46
+        y: 42
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,9 +173,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 28
-        y: 42
+        y: 40
         width: 16
-        height: 12
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,9 +185,9 @@ TextureImporter:
       name: Apple
       rect:
         serializedVersion: 2
-        x: 20
+        x: 19
         y: 29
-        width: 9
+        width: 12
         height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -197,10 +198,23 @@ TextureImporter:
       name: Reputation
       rect:
         serializedVersion: 2
-        x: 40
+        x: 37
         y: 3
-        width: 5
+        width: 11
         height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turn
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 10
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

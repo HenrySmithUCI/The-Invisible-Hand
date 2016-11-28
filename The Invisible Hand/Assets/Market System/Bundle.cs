@@ -82,7 +82,7 @@ public class Bundle
 
    
 
-    public List<string> shuffle(List<string> lst) //shuffles a list
+    public static List<string> shuffle(List<string> lst) //shuffles a list
     {
         List<string> taken = new List<string>(lst);
         for (int i = 0; i < lst.Count; i++)

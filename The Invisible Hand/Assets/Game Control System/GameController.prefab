@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013618608744}
+  - 114: {fileID: 114000013847799236}
   m_Layer: 0
   m_Name: Event Manager
   m_TagString: Untagged
@@ -99,6 +100,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010771661506}
+  - 114: {fileID: 114000011192199614}
   m_Layer: 0
   m_Name: Bundle Manager
   m_TagString: Untagged
@@ -241,9 +243,11 @@ MonoBehaviour:
     amount: 1
   - resourceName: Leather
     amount: 1
-  - resourceName: Food
+  - resourceName: Apple
     amount: 1
   - resourceName: Fairy
+    amount: 1
+  - resourceName: Herb
     amount: 1
   - resourceName: Gem
     amount: 1
@@ -251,12 +255,18 @@ MonoBehaviour:
   - Apple
   - Wood
   - Cloth
-  - Steel
-  - Stone
-  - Fairy
-  - Herb
-  - Leather
   - Gem
+--- !u!114 &114000011192199614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013363423994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518204b792c0b344cbf0a12d89dd948b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012614396820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,9 +389,23 @@ MonoBehaviour:
   - spriteName: Wood
     color: {r: 0.703, g: 0.384, b: 0, a: 1}
     sprite: {fileID: 21300000, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
-  - spriteName: Reputation
+  - spriteName: Turn
+    color: {r: 1, g: 1, b: 0, a: 1}
+    sprite: {fileID: 21300022, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
+  - spriteName: Turn
     color: {r: 0, g: 0.703, b: 0.3830137, a: 1}
     sprite: {fileID: 21300020, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
   emptyPrefab: {fileID: 224000014083962814, guid: 15bf27fd67cdb83479f82b24683acef7,
     type: 2}
   rdPrefab: {fileID: 114000011586007420, guid: 0926ddc6b0df3ff42865c16d0d8b7bc6, type: 2}
+--- !u!114 &114000013847799236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011887255178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa72ddac5e08e3944b50faa83cb0df92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

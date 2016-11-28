@@ -32,7 +32,7 @@ public class UIManager : Singleton<UIManager> {
   private Text turnText;
 
   void Start() {
-    updateAll();
+    //updateAll();
   }
 
   public void seatInside(RectTransform parent, RectTransform child, Rect AnchorPos) {

@@ -41,6 +41,22 @@ public class MakeMarketUI : MonoBehaviour {
   }
 
   void makeBundleButtons() {
+    for(int i = 0; i < BundleManager.Instance.availableBundles.Count; i++) {
+      RectTransform rt = Instantiate(bundleButtonPrefab).GetComponent<RectTransform>();
 
+      Vector2 trCorner = new Vector2(0.57f, 0.88f);
+      Vector2 rectSize = new Vector2(0.2f, 0.15f);
+      float spacer = 0.02f;
+
+      Rect r = new Rect();
+      r.xMin = trCorner.x;
+      r.yMin = (trCorner.y - rectSize.y) - (i * (spacer + rectSize.y));
+      r.xMax = trCorner.x + rectSize.x;
+      r.yMax = trCorner.y - (i * (spacer + rectSize.y));
+
+      UIManager.Instance.seatInside(this.GetComponent<RectTransform>(), rt, r);
+      rt.GetComponent<DisplayBundle>().bundle = BundleManager.Instance.availableBundles[i];
+      rt.GetComponent<DisplayBundle>().updateDisplay();
+    }
   }
 }

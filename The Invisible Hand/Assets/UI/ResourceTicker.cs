@@ -16,7 +16,7 @@ public class ResourceTicker : MonoBehaviour {
 
     for(int i = 0; i < toDisplay.Count && i < displaySpots; i++) {
       int amount = Mathf.FloorToInt(ResourceStorage.Instance.checkResource(toDisplay[i]));
-      Rect anchorPos = new Rect((float)i * (1f / (float)displaySpots), 0f, (1f / (float)displaySpots), 1f);
+      Rect anchorPos = new Rect((float)i * (1f / (float)displaySpots), 0.05f, (1f / (float)displaySpots), 0.9f);
 
       UIManager.Instance.makeResourceDisplay(toDisplay[i], amount, anchorPos, this.GetComponent<RectTransform>()).updateDisplay();
     }

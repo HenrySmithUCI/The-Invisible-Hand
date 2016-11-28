@@ -24,6 +24,7 @@ public class PhaseManager : Singleton<PhaseManager> {
 
   public void nextTurn() {
     turn++;
+    BundleManager.Instance.generateBundles();
     UIManager.Instance.updateTurn();
   }
 

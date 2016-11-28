@@ -174,7 +174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceButtonPrefab: {fileID: 222000012723141842, guid: 98e36166553ea7a4ca9a9aa7aa2634f8,
     type: 2}
-  bundleButtonPrefab: {fileID: 0}
+  bundleButtonPrefab: {fileID: 222000013684374322, guid: 0751df841ec74634090cb5d788e4c428,
+    type: 2}
 --- !u!114 &114000011408616054
 MonoBehaviour:
   m_ObjectHideFlags: 1

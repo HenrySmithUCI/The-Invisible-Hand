@@ -17,7 +17,7 @@ public class CostManager : Singleton<CostManager> {
         return re.amount;
       }
     }
-    throw new System.Exception("Cannot get price of " + resource + "because it does not exist yet!");
+    throw new System.Exception("Cannot get price of " + resource + " because it does not exist yet!");
   }
 
   public void exchangeResource(ResourceAmount resourceAmount) {
