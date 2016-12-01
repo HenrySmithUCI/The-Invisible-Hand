@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//[CreateAssetMenu(fileName = "Screen Object [deprecated]")]
-[CreateAssetMenu(fileName = "Screen Object")]
+//[CreateAssetMenu(fileName = "Screen Object")]
 //constructs the class ScreenObject that inherits the class ScriptableObject with the variables background/text/screens initialized
 public class ScreenObject : ScriptableObject {
 

@@ -13,6 +13,7 @@ public class PhaseManager : Singleton<PhaseManager> {
 
   //on start the scene is set based on the given startPhase string
   public void Start() {
+    EventManager.Instance.makeCurrentEventList(turn);
     SceneManager.sceneLoaded += delegate { UIManager.Instance.changeScene(SceneManager.GetActiveScene().name); };
     changePhase(startPhase);
   }
@@ -24,6 +25,7 @@ public class PhaseManager : Singleton<PhaseManager> {
 
   public void nextTurn() {
     turn++;
+    EventManager.Instance.makeCurrentEventList(turn);
     BundleManager.Instance.generateBundles();
     UIManager.Instance.updateTurn();
   }

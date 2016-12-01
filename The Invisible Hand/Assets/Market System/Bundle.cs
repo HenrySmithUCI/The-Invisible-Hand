@@ -43,7 +43,7 @@ public class Bundle
     {
         Dictionary<string, int> itemAmounts = new Dictionary<string, int>();
         List<string> resources = new List<string>(itemTypes);
-        resources = shuffle(resources);
+        resources = Shuffle.shuffle<string>(resources);
         foreach( string resource in resources)
         {
             itemAmounts.Add(resource, 0);
@@ -74,26 +74,6 @@ public class Bundle
 
 
         return itemAmounts;
-
-
-
-
-    }
-
-   
-
-    public static List<string> shuffle(List<string> lst) //shuffles a list
-    {
-        List<string> taken = new List<string>(lst);
-        for (int i = 0; i < lst.Count; i++)
-        {
-            int k = UnityEngine.Random.Range(0, taken.Count);
-            lst[i] = taken[k];
-            taken.Remove(taken[k]);
-
-        }
-        return lst;
-
 
 
 

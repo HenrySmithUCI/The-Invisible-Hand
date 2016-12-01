@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 //class that is in charge of the game's UI
@@ -71,6 +72,9 @@ public class UIManager : Singleton<UIManager> {
     return rd;
   }
 
+  public void setCurrentEvent(EventObject eo) {
+    GameObject.Find("Event Body").GetComponent<RenderEvent>().renderAs(eo);
+  }
  
   //updates the UI dealing with resources, everytime the storage variable in the ResourceStorage class is changed
   public void updateResources() {
@@ -119,10 +123,12 @@ public class UIManager : Singleton<UIManager> {
     if (GameObject.Find("Quest Ticker") != null) {
       GameObject.Find("Quest Ticker").GetComponent<QuestTicker>().updateDisplay();
     }
+    
+    if(GameObject.Find("Event Body") != null) {
+      EventManager.Instance.nextEvent();
+    }
   }
 
-
-  //on start the given resource list and turn count will be updated
   private void updateAll() {
     if (GameObject.Find("Resource Ticker") != null) {
       GameObject.Find("Resource Ticker").GetComponent<ResourceTicker>().updateResources();

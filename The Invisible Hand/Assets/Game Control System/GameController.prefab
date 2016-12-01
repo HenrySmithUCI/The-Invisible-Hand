@@ -35,7 +35,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013618608744}
-  - 114: {fileID: 114000013847799236}
+  - 114: {fileID: 114000012920117318}
+  - 114: {fileID: 114000010421191108}
   m_Layer: 0
   m_Name: Event Manager
   m_TagString: Untagged
@@ -221,6 +222,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010383212980}
   m_RootOrder: 5
+--- !u!114 &114000010421191108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011887255178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec72c922ac109d34aaa1fd3bacc227f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEventList: []
+  currentEvent: {fileID: 0}
 --- !u!114 &114000011153208064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -299,6 +313,21 @@ MonoBehaviour:
     amount: 0
   - resourceName: Gem
     amount: 0
+--- !u!114 &114000012920117318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011887255178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4114eed6166a224db1b75e461b48240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnDependentEvents:
+  - events:
+    - {fileID: 11400000, guid: 269205e3c79d5e84eb9268adfc023ef0, type: 2}
+  turnIndependentEvents: []
 --- !u!114 &114000013053296652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -398,14 +427,3 @@ MonoBehaviour:
   emptyPrefab: {fileID: 224000014083962814, guid: 15bf27fd67cdb83479f82b24683acef7,
     type: 2}
   rdPrefab: {fileID: 114000011586007420, guid: 0926ddc6b0df3ff42865c16d0d8b7bc6, type: 2}
---- !u!114 &114000013847799236
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011887255178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa72ddac5e08e3944b50faa83cb0df92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

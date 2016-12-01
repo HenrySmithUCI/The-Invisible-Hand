@@ -25,7 +25,7 @@ public class BundleManager : Singleton<BundleManager> {
     int num = Random.Range(2, 5);
 
     List<string> ret = new List<string>(CostManager.Instance.availableResources);
-    ret = Bundle.shuffle(ret);
+    ret = Shuffle.shuffle<string>(ret);
     
     return ret.GetRange(0,num);
   }

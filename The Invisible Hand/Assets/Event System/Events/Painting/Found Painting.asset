@@ -13,6 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Found Painting
   text: You found this masterpeice jsut lying in some rubble!
+  textEvents:
+  - text: You were just walking along the street.
+  - text: You found something weird in a few rocks.
+  redirectEvents: []
+  setUpNewEvent:
+    eventObejct: {fileID: 0}
+    value: 0
+  assignedQuest: {fileID: 0}
   connectedOptions:
   - {fileID: 11400000, guid: df32f6d35c40e9b4a92e3a28f9250a68, type: 2}
   - {fileID: 11400000, guid: f2b07cbee82911a4084aea010b5186d4, type: 2}
