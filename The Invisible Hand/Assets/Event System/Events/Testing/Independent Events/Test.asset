@@ -9,22 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: Found Painting
+  m_Name: Test
   m_EditorClassIdentifier: 
-  title: Found Painting
-  text: You found this masterpeice jsut lying in some rubble!
-  textEvents:
-  - text: You were just walking along the street.
-  - text: You found something weird in a few rocks.
+  title: 1
+  text: 
+  textEvents: []
   redirectEvents: []
   setUpNewEvent:
     eventObejct: {fileID: 0}
     value: 0
   assignedQuest: {fileID: 0}
-  connectedOptions:
-  - {fileID: 11400000, guid: df32f6d35c40e9b4a92e3a28f9250a68, type: 2}
-  - {fileID: 11400000, guid: f2b07cbee82911a4084aea010b5186d4, type: 2}
+  connectedOptions: []
   prerequisites: []
   effects: []
   tint: {r: 0, g: 0, b: 0, a: 0}
-  frontImage: {fileID: 21300000, guid: 01e315ee9c7030b4db52caa3f894cc08, type: 3}
+  frontImage: {fileID: 0}

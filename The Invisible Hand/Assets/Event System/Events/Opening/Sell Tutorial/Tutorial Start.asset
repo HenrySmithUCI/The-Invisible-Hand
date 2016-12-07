@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: Tutorial Start
+  m_EditorClassIdentifier: 
+  title: The Invisible Hand
+  textEvents:
+  - text: In this game you play the role of a young boy managing a general goods store
+      in a fantasy nation at war.
+  - text: Because this is only a demo, the role of your brother will be played by
+      Bob. Say hi Bob.
+  - text: 'Bob: Whatever...'
+  - text: Anyway, in this scene your brother was in the middle of teaching you the
+      basics of shop management.
+  text: 'Bob: Ok, uuuh, sell me some apples'
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 0}
+  connectedOptions:
+  - eventObject: {fileID: 11400000, guid: 573c60ab2b8a2e14499ceb21e29c3471, type: 2}
+    name: I don't have apples.
+    value: 0
+  prerequisites: []
+  effects: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}

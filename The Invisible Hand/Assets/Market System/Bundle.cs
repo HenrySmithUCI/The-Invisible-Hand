@@ -14,8 +14,6 @@ public class Bundle
   
     public Bundle(List<string> resources, int minPrice) //returns item and amounts
     {
-        
-        
         bundle = genBundle(minPrice, resources);
 
         
@@ -61,9 +59,9 @@ public class Bundle
             string resource = resources[index];
 
             int amt = genAmount(resource, minPrice);
-            totalPrice += Mathf.CeilToInt(amt * priceModify(CostManager.Instance.getPrice(resource)));
+            totalPrice += Mathf.CeilToInt(amt * CostManager.Instance.getPrice(resource));
             itemAmounts[resource] += amt;
-            minPrice -= amt;
+            minPrice -= amt * Mathf.CeilToInt(CostManager.Instance.getPrice(resource));
             index++;
 
 
@@ -72,12 +70,31 @@ public class Bundle
 
         }
 
+        List<string> toRemove = new List<string>();
+        foreach (string resource in itemAmounts.Keys) {
+            if(itemAmounts[resource] == 0) {
+                toRemove.Add(resource);
+            }
+        }
 
+        foreach(string resource in toRemove) {
+            itemAmounts.Remove(resource);
+        }
+
+        totalPrice = Mathf.CeilToInt(priceModify(totalPrice));
         return itemAmounts;
 
 
 
 
+    }
+
+    public float getEffectivePrice() {
+        float sum = 0;
+        foreach (string resource in bundle.Keys) {
+            sum += bundle[resource] * CostManager.Instance.getPrice(resource);
+        }
+        return sum;
     }
 
     private int genAmount(string resource, int minPrice)//logic for deciding the quanitity of a resource in a bundle
@@ -89,9 +106,15 @@ public class Bundle
 
     }
 
-    private float priceModify(float amount)
+    private float priceModify(float price)
     {
-        return amount / 2;
+        // numbers gotten after playing around in desmos for a while for a good curve
+        float power = 0.59f;
+        float multiplyer = 33.4f;
+        float xShift = Mathf.Pow(multiplyer * power, 1f / (1f - power));
+        float yShift = (Mathf.Pow(xShift, power) * multiplyer) + 4f; // +2 so there is some discount even at low levels
+
+        return (Mathf.Pow(price + xShift, power) * multiplyer) - yShift;
     }
 
     

@@ -21,10 +21,4 @@ public class ResourceTicker : MonoBehaviour {
       UIManager.Instance.makeResourceDisplay(toDisplay[i], amount, anchorPos, this.GetComponent<RectTransform>()).updateDisplay();
     }
   }
-
-  public void updateResources() {
-    for(int i = 0; i < transform.childCount; i++) {
-      transform.GetChild(i).GetComponent<ResourceDisplay>().updateDisplay();
-    }
-  }
 }

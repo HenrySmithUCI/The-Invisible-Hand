@@ -5,8 +5,9 @@ using System.Collections.Generic;
 public class EventObject : ScriptableObject {
 
   [System.Serializable]
-  public class EventInt {
-    public EventObject eventObejct;
+  public class EventGroup {
+    public EventObject eventObject;
+    public string name;
     public int value;
   }
 
@@ -16,16 +17,17 @@ public class EventObject : ScriptableObject {
   }
 
   public string title;
-  public string text;
   public TextEvent[] textEvents;
-  public EventInt[] redirectEvents;
-  public EventInt setUpNewEvent;
+  public string text;
+  public EventGroup[] redirectEvents;
+  public EventGroup setUpNewEvent;
   public QuestObject assignedQuest;
-  public EventObject[] connectedOptions;
+  public EventGroup[] connectedOptions;
   public ResourceAmount[] prerequisites;
   public ResourceAmount[] effects;
   public Color tint;
   public Sprite frontImage;
+  public EventObject onTooManyQuests;
 
   public bool matchesPrerequisites() {
     foreach(ResourceAmount r in prerequisites) {

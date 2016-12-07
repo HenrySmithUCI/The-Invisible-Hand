@@ -9,12 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: Test
+  m_Name: Quest Got
   m_EditorClassIdentifier: 
-  title: 
-  text: 
+  title: Quest Got
+  text: You got a quest!
+  textEvents: []
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 11400000, guid: 30d032d19e801334db2c9d640a2e8dbd, type: 2}
   connectedOptions: []
   prerequisites: []
   effects: []
   tint: {r: 0, g: 0, b: 0, a: 0}
   frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 11400000, guid: 7ae2ef65a0fc3964b8455c19d3467888, type: 2}

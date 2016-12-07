@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿/*
+using UnityEngine;
 using System.Collections;
 
 //class that updates the turn counter
@@ -17,3 +18,4 @@ public class TurnManager : Singleton<TurnManager> {
   //constructs the public variable Turn used outside of the class
   public int Turn { get { return turn; } }
 }
+*/

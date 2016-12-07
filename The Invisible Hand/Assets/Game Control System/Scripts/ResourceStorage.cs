@@ -14,7 +14,7 @@ public class ResourceStorage : Singleton<ResourceStorage> {
     foreach(ResourceAmount resource in storage) {
       if (resource.resourceName == name) {
         resource.amount += amount;
-        UIManager.Instance.updateResources();
+        UIManager.Instance.updateAll();
         return;
       }
     }
@@ -23,7 +23,7 @@ public class ResourceStorage : Singleton<ResourceStorage> {
     newResource.resourceName = name;
     newResource.amount = amount;
     storage.Add(newResource);
-    UIManager.Instance.updateResources();
+    UIManager.Instance.updateAll();
   }
 
   //initializes the exception which is raised when a specified resource is not found
@@ -38,6 +38,16 @@ public class ResourceStorage : Singleton<ResourceStorage> {
     }
 
     throw new noResourceFoundError();
+  }
+
+  public bool isResourceStored(string value) {
+    try {
+      checkResource(value);
+      return true;
+    }
+    catch (noResourceFoundError) {
+      return false;
+    }
   }
 
   //returns a string for each resource type in storage to the following '{name} : {amount}'

@@ -7,6 +7,6 @@ public class SetSceneOnClick : SetOnClick {
   public string sceneName;
 
 	protected override void action() {
-    PhaseManager.changePhase(sceneName);
+    PhaseManager.Instance.changePhase(sceneName);
   }
 }
