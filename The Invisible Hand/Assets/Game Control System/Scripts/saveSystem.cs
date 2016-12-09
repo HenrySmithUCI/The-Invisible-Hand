@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEditor;
 
 //sources for code: http://nielson.io/2015/09/saving-games-in-unity/ and https://www.sitepoint.com/saving-and-loading-player-game-data-in-unity/
 //This is how to implement these classes together:
@@ -39,7 +40,7 @@ public class savedStatistics : saveGame {
     public EventListObject gameEvents;
     public List<QuestObject> allQuests;
     public List<ResourceAmount> playerResources;
-    public int test = 300; //just for testing
+    public int test = UnityEngine.Random.Range(1, 100); //just for testing
 
    
 
@@ -54,28 +55,37 @@ public class saveSystem
         this.localCopy = localCopy;
     }
 
-    public void SaveData()
+    public void SaveData(string filePath)
     {
+
         if (!Directory.Exists("Saves"))
             Directory.CreateDirectory("Saves");
 
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream saveFile = File.Create("Saves/save.binary");
+        FileStream saveFile = File.Create(filePath);
 
         localCopy = new savedStatistics();
+        
 
         formatter.Serialize(saveFile, localCopy);
 
         saveFile.Close();
     }
 
-    public void LoadData()
+    public void LoadData(string filePath)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream saveFile = File.Open("Saves/save.binary", FileMode.Open);
+        FileStream saveFile = File.Open(filePath, FileMode.Open);
 
         localCopy = (savedStatistics)formatter.Deserialize(saveFile);
         Debug.Log(localCopy.test); //this was just for testing
         saveFile.Close();
     }
+
+   
+
+
 }
+
+
+
