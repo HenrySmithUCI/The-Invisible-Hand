@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: Give Quest
+  m_EditorClassIdentifier: 
+  title: Tutorial
+  textEvents:
+  - text: At this point, your brother should explain how quests work to you.
+  - text: 'Bob: So sometimes people will want stuff from you...'
+  - text: 'Bob: So get it for them... I guess...'
+  - text: Your brother will now give you a quest to start off with
+  - text: '...'
+  - text: (Cough) Ahem!
+  - text: 'Bob: Oh yeah, uh... get 1 Wood and 1 Apple.'
+  text: 'Bob: Can you, like, do that for me?'
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 0}
+  connectedOptions:
+  - eventObject: {fileID: 11400000, guid: 40480fde72e5fd84e9e75004846fb524, type: 2}
+    name: Do I have a choice?
+    value: 0
+  prerequisites: []
+  effects: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}

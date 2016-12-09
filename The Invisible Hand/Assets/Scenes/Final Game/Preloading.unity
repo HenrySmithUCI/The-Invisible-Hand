@@ -129,108 +129,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e90309b6ae9e96845a4b1b97eba84b1e, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &771080758
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
+    - target: {fileID: 114000013403600880, guid: e90309b6ae9e96845a4b1b97eba84b1e,
         type: 2}
-      propertyPath: m_LocalPosition.x
+      propertyPath: fadeCurve.m_Curve.Array.data[0].inSlope
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
+    - target: {fileID: 114000013403600880, guid: e90309b6ae9e96845a4b1b97eba84b1e,
         type: 2}
-      propertyPath: m_LocalPosition.y
+      propertyPath: fadeCurve.m_Curve.Array.data[0].outSlope
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
+    - target: {fileID: 114000013403600880, guid: e90309b6ae9e96845a4b1b97eba84b1e,
         type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_RootOrder
+      propertyPath: fadeCurve.m_Curve.Array.data[1].inSlope
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
+    - target: {fileID: 114000013403600880, guid: e90309b6ae9e96845a4b1b97eba84b1e,
         type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012020923618, guid: 7d69f81d70c206740aebff159909dbf1,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
+      propertyPath: fadeCurve.m_Curve.Array.data[1].outSlope
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7d69f81d70c206740aebff159909dbf1, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: e90309b6ae9e96845a4b1b97eba84b1e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1680724046
 GameObject:

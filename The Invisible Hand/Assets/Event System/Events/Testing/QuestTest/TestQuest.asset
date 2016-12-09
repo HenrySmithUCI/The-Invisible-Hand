@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1c920767413ed48b3fc33bbd3b9734, type: 3}
+  m_Name: TestQuest
+  m_EditorClassIdentifier: 
+  description: TestQuest
+  cost:
+  - resourceName: Wood
+    amount: 9999
+  - resourceName: Wood
+    amount: 99999
+  - resourceName: Wood
+    amount: 99999
+  - resourceName: Wood
+    amount: 999
+  maxTurns: 1
+  turnsToComplete: 1
+  OnQuestEnd: {fileID: 11400000, guid: edaca65a5cf5c05409cff2dedb8bb524, type: 2}

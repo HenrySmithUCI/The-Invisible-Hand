@@ -9,12 +9,14 @@ public class QuestDisplay : MonoBehaviour {
   private Text description;
   private RectTransform cost;
   private RectTransform reward;
+  private RectTransform timer;
 
   public void Awake() {
     RectTransform rt = GetComponent<RectTransform>();
     description = rt.Find("Description").GetComponent<Text>();
     cost = rt.Find("Cost").GetComponent<RectTransform>();
-    reward = rt.Find("Reward").GetComponent<RectTransform>();
+    //reward = rt.Find("Reward").GetComponent<RectTransform>();
+    timer = rt.Find("Timer").GetComponent<RectTransform>();
   }
 
   public void UpdateDisplay() {
@@ -27,12 +29,14 @@ public class QuestDisplay : MonoBehaviour {
         new Rect(0,0,1,1), 
         cost.GetChild(i).GetComponent<RectTransform>());
     }
-
+    /*
     for (int i = 0; i < quest.reward.Length; i++) {
       UIManager.Instance.makeResourceDisplay(quest.reward[i].resourceName,
         Mathf.CeilToInt(quest.reward[i].amount),
         new Rect(0,0,1,1),
         reward.GetChild(i).GetComponent<RectTransform>());
     }
+    */
+    UIManager.Instance.makeResourceDisplay("Turn", quest.turnsToComplete, new Rect(0,0,1,1), timer);
   }
 }

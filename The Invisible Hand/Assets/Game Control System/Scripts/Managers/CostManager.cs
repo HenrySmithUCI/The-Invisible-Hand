@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class CostManager : Singleton<CostManager> {
 
   protected CostManager() { }
 
   //initializes an array of the class ResourceAmount
+  public List<ResourceAmount> staticPriceTable;
   public ResourceAmount[] priceTable;
   public List<string> availableResources;
 
@@ -20,8 +22,46 @@ public class CostManager : Singleton<CostManager> {
     throw new System.Exception("Cannot get price of " + resource + " because it does not exist yet!");
   }
 
+  public void updateCosts() {
+    string[] resources = { "Wood", "Stone", "Steel", "Cloth", "Leather", "Apple", "Herb", "Fairy", "Gem" };
+    resources = resources.Except<string>(availableResources).ToArray<string>();
+
+    foreach (string s in resources) {
+      try {
+        if(ResourceStorage.Instance.checkResource(s + " Available" ) > 0) {
+          availableResources.Add(s);
+        }
+      }
+      catch (ResourceStorage.noResourceFoundError) {
+        continue;
+      }
+    }
+
+    for (int i = 0; i < staticPriceTable.Count; i++) {
+      try {
+        priceTable[i].amount = staticPriceTable.Find(resource => resource.resourceName == priceTable[i].resourceName).amount;
+        priceTable[i].amount *= ResourceStorage.Instance.checkResource(priceTable[i].resourceName + " Price");
+      }
+      catch(ResourceStorage.noResourceFoundError){
+        continue;
+      }
+    }
+    
+  }
+
   public void exchangeResource(ResourceAmount resourceAmount) {
-    ResourceStorage.Instance.addResource(resourceAmount.resourceName, resourceAmount.amount);
+    if (resourceAmount.amount > 0) {
+      if (ResourceStorage.Instance.checkResource("Gold") >= getPrice(resourceAmount.resourceName) * resourceAmount.amount) {
+        ResourceStorage.Instance.addResource(resourceAmount.resourceName, resourceAmount.amount);
+        ResourceStorage.Instance.addResource("Gold", -1 * getPrice(resourceAmount.resourceName) * resourceAmount.amount);
+      }
+    }
+    else {
+      if (ResourceStorage.Instance.checkResource(resourceAmount.resourceName) >= -1 * resourceAmount.amount) {
+        ResourceStorage.Instance.addResource(resourceAmount.resourceName, resourceAmount.amount);
+        ResourceStorage.Instance.addResource("Gold", -1 * getPrice(resourceAmount.resourceName) * resourceAmount.amount);
+      }
+    }
   }
   
   //increments the specificed resource by one

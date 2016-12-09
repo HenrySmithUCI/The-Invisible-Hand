@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PhaseManager : Singleton<PhaseManager> {
@@ -9,25 +9,67 @@ public class PhaseManager : Singleton<PhaseManager> {
 
   //initializes the string startPhase
   public string startPhase;
+  public AnimationCurve fadeCurve;
+  public Image fadeImage;
+  public float fadeInTime;
+  public float fadeOutTime;
   private int turn;
 
   //on start the scene is set based on the given startPhase string
   public void Start() {
-    EventManager.Instance.makeCurrentEventList(turn);
     SceneManager.sceneLoaded += delegate { UIManager.Instance.changeScene(SceneManager.GetActiveScene().name); };
-    changePhase(startPhase);
+    SceneManager.sceneLoaded += delegate { StartCoroutine(this.fadeIn(SceneManager.GetActiveScene().name)); };
+    turn = 0;
+    updateData();
+    SceneManager.LoadScene(startPhase);
   }
   
   //loads the scene specified by the given input
-  public static void changePhase(string phase) {
+  public void changePhase(string phase) {
+    if (phase == "Market Scene") {
+      CostManager.Instance.updateCosts();
+      BundleManager.Instance.generateBundles();
+    }
+    StartCoroutine(this.fadeOut(phase));
+  }
+
+  public IEnumerator fadeOut(string phase) {
+    float t = 0f;
+
+    while(t < 1f) {
+      t += Time.deltaTime / fadeOutTime;
+      Color c = fadeImage.color;
+      c.a = fadeCurve.Evaluate(t);
+      fadeImage.color = c;
+      yield return 0;
+    }
+
     SceneManager.LoadScene(phase);
+  }
+
+  public IEnumerator fadeIn(string phase) {
+    float t = 1f;
+
+    while (t > 0f) {
+      t -= Time.deltaTime / fadeInTime;
+      Color c = fadeImage.color;
+      c.a = fadeCurve.Evaluate(t);
+      fadeImage.color = c;
+      yield return 0;
+    }
+  }
+
+  public void updateData() {
+    BundleManager.Instance.completeAllBuys();
+    EventManager.Instance.makeCurrentEventList(turn);
+    QuestManager.Instance.updateQuests();
+    UIManager.Instance.updateTurn();
   }
 
   public void nextTurn() {
     turn++;
-    EventManager.Instance.makeCurrentEventList(turn);
-    BundleManager.Instance.generateBundles();
-    UIManager.Instance.updateTurn();
+    updateData();
+    changePhase(startPhase);
   }
 
   public int Turn { get { return turn; } }

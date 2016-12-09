@@ -32,10 +32,6 @@ public class UIManager : Singleton<UIManager> {
   private Text resourcesText;
   private Text turnText;
 
-  void Start() {
-    //updateAll();
-  }
-
   public void seatInside(RectTransform parent, RectTransform child, Rect AnchorPos) {
     child.SetParent(parent);
     child.SetParent(parent);
@@ -72,10 +68,6 @@ public class UIManager : Singleton<UIManager> {
     return rd;
   }
 
-  public void setCurrentEvent(EventObject eo) {
-    GameObject.Find("Event Body").GetComponent<RenderEvent>().renderAs(eo);
-  }
- 
   //updates the UI dealing with resources, everytime the storage variable in the ResourceStorage class is changed
   public void updateResources() {
     RectTransform resourceBox = GameObject.Find("Resource Ticker").GetComponent<RectTransform>();
@@ -97,12 +89,13 @@ public class UIManager : Singleton<UIManager> {
 
   //updates the UI dealing with the turn counter, everytime the turn variable in TurnManager class is changed
   public void updateTurn() {
-    GameObject.Find("Turn Ticker").GetComponentInChildren<Text>().text = PhaseManager.Instance.Turn.ToString();
+    if (GameObject.Find("Turn Ticker") != null) {
+      GameObject.Find("Turn Ticker").GetComponentInChildren<Text>().text = (PhaseManager.Instance.Turn + 1).ToString();
+    }
   }
 
   //accesses the list of available scenes and if the input sceneName matches the scene found in the list, the UI updates
   public void changeScene(string sceneName) {
-
     foreach(stringScene ss in sceneInterfaces) {
       if (ss.sceneName == sceneName) { 
         Instantiate(ss.sceneUI);
@@ -123,15 +116,19 @@ public class UIManager : Singleton<UIManager> {
     if (GameObject.Find("Quest Ticker") != null) {
       GameObject.Find("Quest Ticker").GetComponent<QuestTicker>().updateDisplay();
     }
-    
     if(GameObject.Find("Event Body") != null) {
       EventManager.Instance.nextEvent();
     }
   }
 
-  private void updateAll() {
+  public void updateAll() {
     if (GameObject.Find("Resource Ticker") != null) {
-      GameObject.Find("Resource Ticker").GetComponent<ResourceTicker>().updateResources();
+      //GameObject.Find("Resource Ticker").GetComponent<ResourceTicker>().updateResources();
+      updateResources();
+    }
+
+    if(GameObject.Find("Market UI(Clone)") != null) {
+      GameObject.Find("Market UI(Clone)").GetComponent<MakeMarketUI>().updateVisuals();
     }
 
     if (GameObject.Find("Turn Ticker") != null) {;
@@ -140,6 +137,10 @@ public class UIManager : Singleton<UIManager> {
 
     if (GameObject.Find("Quest Ticker") != null) {
       GameObject.Find("Quest Ticker").GetComponent<QuestTicker>().updateDisplay();
+    }
+
+    if (GameObject.Find("Event Body") != null) {
+      GameObject.Find("Event Body").GetComponent<RenderEvent>().renderAs(EventManager.Instance.currentEvent);
     }
   }
 }

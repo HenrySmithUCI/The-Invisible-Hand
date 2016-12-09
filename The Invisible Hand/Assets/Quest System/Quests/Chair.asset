@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1c920767413ed48b3fc33bbd3b9734, type: 3}
   m_Name: Chair
   m_EditorClassIdentifier: Assembly-CSharp::QuestObject
-  description: Make a chair for the Jarl's Birthday!
+  description: 'This is a '
   cost:
   - resourceName: Wood
     amount: 100
@@ -21,12 +21,6 @@ MonoBehaviour:
     amount: 90
   - resourceName: Fairy
     amount: 5
-  reward:
-  - resourceName: Gold
-    amount: 2000
-  - resourceName: Steel
-    amount: 40
-  - resourceName: Reputation
-    amount: 9
-  - resourceName: Gem
-    amount: 1
+  maxTurns: 2
+  turnsToComplete: 2
+  OnQuestEnd: {fileID: 0}
