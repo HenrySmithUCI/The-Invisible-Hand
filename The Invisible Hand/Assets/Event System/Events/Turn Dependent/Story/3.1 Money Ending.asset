@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: 3.1 Money Ending
+  m_EditorClassIdentifier: 
+  title: The Invisible Hand Returns
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "You step into the Guild Hall of the Invisible Hand, looking around the
+      vast stone room before joining the back of the line. Hours pass as your place
+      in line slowly approaches the teller, until finally the woman behind the counter
+      calls out \u201Cnext!\u201D and you place your paperwork upon the counter."
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "\u201CI\u2019d like to submit an application for transferal of ownership.
+      Here is the necessary paperwork, along with the necessary fees,\u201D you say
+      as you place everything on the counter. The teller quickly looks everything
+      over, thumbing through the papers to make sure everything is in order."
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "\u201CIt looks like you\u2019ve got everything you need here, sir, so you\u2019re
+      free to go. Your application will be processed, and you\u2019ll be notified
+      of your approval status within three days. Have a good evening,\u201D she says
+      with a halfhearted wave. Before you\u2019ve even left the counter she calls
+      out for the next customer in line to step forward, and you begin the long walk
+      back to your shop."
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: You've saved your store from The Invisible Hand. However, You can still
+      continue now in endless mode.
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 0}
+  effects:
+  - resourceName: Gold
+    amount: -5000
+  prerequisites:
+  - resourceName: Gold
+    amount: 5000
+  connectedOptions: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0

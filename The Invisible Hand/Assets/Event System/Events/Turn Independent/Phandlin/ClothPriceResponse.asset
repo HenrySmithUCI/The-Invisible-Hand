@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Name: ClothPriceResponse
   m_EditorClassIdentifier: 
   title: Cloth prices have increased!
-  textEvents: []
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: Just as you had feared, you read today that the price of cloth has skyrocketed.
   redirectEvents: []
   setUpNewEvent:
-    eventObject: {fileID: 0}
+    eventObject: {fileID: 11400000, guid: 2e9c103e3c8133e41a9020a8c594a790, type: 2}
     name: 
-    value: 0
+    value: 2
   assignedQuest: {fileID: 0}
   effects:
   - resourceName: Cloth Price

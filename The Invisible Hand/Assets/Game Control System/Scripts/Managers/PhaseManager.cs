@@ -32,6 +32,7 @@ public class PhaseManager : Singleton<PhaseManager> {
     if (phase == "Market Scene") {
       CostManager.Instance.updateCosts();
       BundleManager.Instance.generateBundles();
+            QuestManager.Instance.removeEndedQuests();
     }
     StartCoroutine(this.fadeOut(phase));
   }

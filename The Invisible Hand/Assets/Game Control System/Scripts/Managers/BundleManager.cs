@@ -91,6 +91,6 @@ public class BundleManager : Singleton<BundleManager> {
       return 20;
     }
 
-    return Random.Range((turn * 50) + 100, (turn * 100) + 100);
+    return Random.Range(((turn + 1) * 30), ((turn + 1) * 50));
   }
 }

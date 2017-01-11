@@ -32,9 +32,9 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: ' Upon closer inspection, you learn that Phandalin has been turned to pure
+    text: Upon closer inspection, you learn that Phandalin has been turned to pure
       obsidian using a powerful gauntlet, just one of a series of atrocities committed
-      by the young man whose picture appears in the article.'
+      by three mysterious young men whose silhouettes appears in the article.
   - toDisplay: []
     extraToDisplay:
       resourceName: 

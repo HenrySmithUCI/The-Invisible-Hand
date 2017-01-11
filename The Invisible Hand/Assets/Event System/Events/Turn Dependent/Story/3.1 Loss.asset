@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: 3.1 Loss
+  m_EditorClassIdentifier: 
+  title: The Invisible Hand Returns
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "A small envelope sits on the counter, clearly sealed with the marking of
+      the Invisible Hand. You\u2019ve been hesitant to open it, but you decide that
+      it\u2019s best to get it over with. You cut the envelope open and pull out a
+      small, folded letter. In a large, elegant script it reads:"
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "\u201CDear Shopkeeper,\r We regretfully inform you that your shop and attached
+      loft have been repossessed by the Guild of the Invisible Hand.\""
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: '"We ask that you politely clear the premises of any and all belongings
+      that you wish to remain in possession of, as anything left by tomorrow at sundown
+      will be considered forfeit to the Guild. We apologize for any inconvenience
+      this may cause you, and we hope you have a wonderful day."'
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "\"Sincerely,\r\nThe Guild of the Invisible Hand\""
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: You've failed to save your shop from The Invisible Hand. However, you can
+      still continue to play the game in endless mode.
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 0}
+  effects: []
+  prerequisites: []
+  connectedOptions: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0

@@ -45,42 +45,36 @@ MonoBehaviour:
       of shop?\u201D You nod your head in response, curious why he\u2019s asking.
       He opens his briefcase, pulls out a small stack of papers, and extends them
       across the counter to you."
-  - toDisplay:
-    - resourceName: Turn
-      amount: 12
+  - toDisplay: []
     extraToDisplay:
-      resourceName: 
-      amount: 0
+      resourceName: Gold
+      amount: 5000
     extraToDisplay2:
-      resourceName: 
-      amount: 0
+      resourceName: Turn
+      amount: 15
     text: "You grab them from him, and before you have a chance to read them he continues
       \u201Cthe Guild of the Invisible Hand is, beginning today, issuing you a warning
       that your shop will be repossessed if the proper transferal of ownership papers
-      and fees are not submitted in full within 12 days\""
-  - toDisplay:
-    - resourceName: Turn
-      amount: 12
+      and fees are not submitted in full within 15 days\""
+  - toDisplay: []
     extraToDisplay:
-      resourceName: 
-      amount: 0
+      resourceName: Gold
+      amount: 5000
     extraToDisplay2:
-      resourceName: 
-      amount: 0
+      resourceName: Turn
+      amount: 15
     text: "\u201CE-excuse me?\u201D you stammer, not quite sure how to respond to
-      him.\r\n\u201CWe\u2019re aware that your brother, the previous owner of this
-      shop, has been drafted into the military to fight for our great nation, and
-      thus ownership of the store must be officially transferred from his name into
-      yours.\""
-  - toDisplay:
-    - resourceName: Turn
-      amount: 12
+      him.\r He continues, \u201CWe\u2019re aware that your brother, the previous
+      owner of this shop, has been drafted into the military to fight for our great
+      nation, and thus ownership of the store must be officially transferred from
+      his name into yours.\""
+  - toDisplay: []
     extraToDisplay:
-      resourceName: 
-      amount: 0
+      resourceName: Gold
+      amount: 5000
     extraToDisplay2:
-      resourceName: 
-      amount: 0
+      resourceName: Turn
+      amount: 15
     text: "\"Unfortunately for you, he did not go through this process before he left,
       leaving the responsibility to you. We\u2019ll be waiting,\u201D he finishes
       with no particular emotion, tipping his hat to you as he leaves the store."
@@ -92,7 +86,10 @@ MonoBehaviour:
   assignedQuest: {fileID: 0}
   effects: []
   prerequisites: []
-  connectedOptions: []
+  connectedOptions:
+  - eventObject: {fileID: 11400000, guid: ab9f3f65c49f0bc4583dafd5d9d00e64, type: 2}
+    name: Continue
+    value: 0
   tint: {r: 0, g: 0, b: 0, a: 0}
   frontImage: {fileID: 0}
   onTooManyQuests: {fileID: 0}

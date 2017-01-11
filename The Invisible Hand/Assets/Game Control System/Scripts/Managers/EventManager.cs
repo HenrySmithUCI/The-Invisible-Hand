@@ -61,6 +61,11 @@ public class EventManager : Singleton<EventManager> {
         {
             activateEvent(RandomEventGenerator.makeSell());
         }
+
+        if (eo.randomQuest)
+        {
+            activateEvent(RandomEventGenerator.makeQuest());
+        }
         foreach (ResourceAmount r in eo.effects) {
       ResourceStorage.Instance.addResource(r.resourceName, r.amount);
     }
@@ -122,10 +127,10 @@ public class EventManager : Singleton<EventManager> {
     }
 
   public int getNumberOfEvents(int turn) {
-        if (turn < 2)
+        if (turn < 2 || turn == 16)
         {
             return 0;
         }
-    return 3;
+    return 7;
   }
 }

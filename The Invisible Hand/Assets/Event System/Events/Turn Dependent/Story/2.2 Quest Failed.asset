@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: OrphanMercy
+  m_Name: 2.2 Quest Failed
   m_EditorClassIdentifier: 
-  title: You confronted the orphan
+  title: Quest Failed
   textEvents:
   - toDisplay: []
     extraToDisplay:
@@ -20,11 +20,7 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: "She stands stock still as soon as you begin speaking, and the color drains
-      from her face when she begins to process what you\u2019re saying. Still clearly
-      terrified, you try and relax her by saying \u201CI know the baker who lives
-      down the street from here. If you\u2019d like, I\u2019ll ask him about giving
-      you the leftovers he throws away\u201D."
+    text: '"Ah, that''s a shame my boy. I needed those by today." He looks disappointed.'
   - toDisplay: []
     extraToDisplay:
       resourceName: 
@@ -32,22 +28,22 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: "Still white as a sheet, she hands you back the bread and begins to leave,
-      but you grab her arm before she can go. \u201CKeep it, you tell her, pushing
-      the bread back into her hand\u201D. She nods her head once, then practically
-      sprints from the store, nearly knocking over one of your other customers in
-      her haste."
+    text: He looks down and recognizes the papers the man from The Invisible Hand
+      gave you. "bah, those snakes strangling you too? I'm forgiving with you lad,
+      but you gotta make sure you keep your promises if you want them out of your
+      hair one day."
   redirectEvents: []
   setUpNewEvent:
     eventObject: {fileID: 0}
     name: 
     value: 0
   assignedQuest: {fileID: 0}
-  effects:
-  - resourceName: Reputation
-    amount: 1
+  effects: []
   prerequisites: []
-  connectedOptions: []
+  connectedOptions:
+  - eventObject: {fileID: 11400000, guid: 61739a4cb71a8be48a3672cca70e7ebb, type: 2}
+    name: I understand
+    value: 0
   tint: {r: 0, g: 0, b: 0, a: 0}
   frontImage: {fileID: 0}
   onTooManyQuests: {fileID: 0}

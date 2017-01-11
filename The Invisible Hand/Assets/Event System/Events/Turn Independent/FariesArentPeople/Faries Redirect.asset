@@ -9,21 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: NoFaries
+  m_Name: Faries Redirect
   m_EditorClassIdentifier: 
-  title: But you have no faries
-  textEvents:
-  - toDisplay: []
-    extraToDisplay:
-      resourceName: 
-      amount: 0
-    extraToDisplay2:
-      resourceName: 
-      amount: 0
-    text: "\u201CI would ordinarily kill this human, as this human would kill my kindred,
-      but Imyos believes that they have been treated with an unusual degree of care.
-      You may live\u201D he declares, extending an arm towards you. "
-  redirectEvents: []
+  title: 
+  textEvents: []
+  redirectEvents:
+  - eventObject: {fileID: 11400000, guid: d0adba97550c5134dbd75d3c08148739, type: 2}
+    name: 
+    value: 0
+  - eventObject: {fileID: 11400000, guid: cb99b08c94564cb47b70ae4adcf046fb, type: 2}
+    name: 
+    value: 0
   setUpNewEvent:
     eventObject: {fileID: 0}
     name: 

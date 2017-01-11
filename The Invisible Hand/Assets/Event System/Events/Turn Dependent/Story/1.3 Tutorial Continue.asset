@@ -47,7 +47,7 @@ MonoBehaviour:
   prerequisites: []
   connectedOptions:
   - eventObject: {fileID: 11400000, guid: 8d3c78deae4f93f44873487dabacab85, type: 2}
-    name: You can count on me Ander. Be safe out there, alright?
+    name: You can count on me Ander
     value: 0
   tint: {r: 0, g: 0, b: 0, a: 0}
   frontImage: {fileID: 0}

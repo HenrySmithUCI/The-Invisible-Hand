@@ -345,6 +345,8 @@ MonoBehaviour:
   availableResources:
   - Apple
   - Wood
+  - Cloth
+  - Herb
 --- !u!114 &114000011192199614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,8 +479,6 @@ MonoBehaviour:
   - events:
     - {fileID: 11400000, guid: d4e46a0d9eb4f654bb3d999e84cf9057, type: 2}
   - events: []
-  - events:
-    - {fileID: 11400000, guid: a0f4a756130444946a7c611f1802abd0, type: 2}
   - events: []
   - events:
     - {fileID: 11400000, guid: e1ceefda30b78e44288fd72efa5e53f6, type: 2}
@@ -488,8 +488,14 @@ MonoBehaviour:
   - events: []
   - events:
     - {fileID: 11400000, guid: 6917087471f1c35479d693733b02fe33, type: 2}
+  - events: []
   - events:
     - {fileID: 11400000, guid: 6382272f172f6bf4299093c26186f898, type: 2}
+  - events: []
+  - events: []
+  - events: []
+  - events: []
+  - events: []
   turnIndependentEvents:
   - {fileID: 11400000, guid: 98ea902330fa4874885b158574361e1e, type: 2}
   - {fileID: 11400000, guid: 1a2c12547299e0a4d9dcb28a5a774ff1, type: 2}
@@ -499,9 +505,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 53e65121abd1b7746bb1757ca06b1ced, type: 2}
   - {fileID: 11400000, guid: 24e1484858f6a3747801b972af82c97b, type: 2}
   - {fileID: 11400000, guid: f8bd8b1c0cc3b2c459509ddf5de1bd30, type: 2}
+  - {fileID: 11400000, guid: 9595870415177804087931921573f3cf, type: 2}
+  - {fileID: 11400000, guid: 9880521bc695e2a4d9de4557e7d7b819, type: 2}
+  - {fileID: 11400000, guid: bf74bf180bf56394c9ec3891aa028074, type: 2}
+  - {fileID: 11400000, guid: 9beae5cb0ae06b147b3ff534bf021182, type: 2}
   endlessEventPool:
   - {fileID: 11400000, guid: adc72672cbdde6141ba622e8a03892e0, type: 2}
   - {fileID: 11400000, guid: 616a2ab5bddf0c04589243cb95c82729, type: 2}
+  - {fileID: 11400000, guid: aea595ea881a46d4aad2cfff59fa9236, type: 2}
   defaultEvent: {fileID: 11400000, guid: 0e5ed58d746b6724f89b65a47755a12e, type: 2}
 --- !u!114 &114000013053296652
 MonoBehaviour:
@@ -619,7 +630,7 @@ MonoBehaviour:
     color: {r: 0.703, g: 0.384, b: 0, a: 1}
     sprite: {fileID: 21300000, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
   - spriteName: Turn
-    color: {r: 1, g: 1, b: 0, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
     sprite: {fileID: 21300022, guid: 4d83917c6c82e9846be65ae1b1e60f86, type: 3}
   - spriteName: Reputation
     color: {r: 0, g: 0.703, b: 0.3830137, a: 1}

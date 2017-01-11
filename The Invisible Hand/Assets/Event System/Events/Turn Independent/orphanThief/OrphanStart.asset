@@ -11,22 +11,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
   m_Name: OrphanStart
   m_EditorClassIdentifier: 
-  title: An orphan enters your store
+  title: Thieving Child
   textEvents:
-  - toDisplay: []
+  - toDisplay:
+    - resourceName: Apple
+      amount: -1
     extraToDisplay:
       resourceName: 
       amount: 0
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: "You Catch an Orphan Stealing Bread: You sit casually behind the counter,
-      feigning reading the newspaper as you eye an urchin\r\nthat has entered your
-      store. She clearly can\u2019t afford anything, and you\u2019re fairly certain
-      she intends to steal something. Sure enough, not five minutes later you catch
-      her swiftly stuffing a loaf of bread into her shirt before continuing to browse
-      the store."
-  - toDisplay: []
+    text: "You sit casually behind the counter, feigning reading the newspaper as
+      you eye an urchin\r\nthat has entered your store. She clearly can\u2019t afford
+      anything, and you\u2019re fairly certain she intends to steal something. Sure
+      enough, not five minutes later you catch her swiftly stuffing an apple into
+      her shirt before continuing to browse the store."
+  - toDisplay:
+    - resourceName: Apple
+      amount: -1
     extraToDisplay:
       resourceName: 
       amount: 0
@@ -42,14 +45,18 @@ MonoBehaviour:
     name: 
     value: 0
   assignedQuest: {fileID: 0}
-  effects: []
-  prerequisites: []
+  effects:
+  - resourceName: Apple
+    amount: -1
+  prerequisites:
+  - resourceName: Apple
+    amount: 1
   connectedOptions:
   - eventObject: {fileID: 11400000, guid: 45e5f3c3d559cac478907adfe627f02f, type: 2}
-    name: "\u201CIn the future, if you\u2019re hungry you can always just ask me\u201D"
+    name: "In the future, if you\u2019re hungry you can always just ask me"
     value: 0
   - eventObject: {fileID: 11400000, guid: 49b127aa5ac57af4294ecb78c82b1b95, type: 2}
-    name: "\u201CI hope you were just looking at that bread"
+    name: I hope you were just looking at that bread
     value: 0
   tint: {r: 0, g: 0, b: 0, a: 0}
   frontImage: {fileID: 0}

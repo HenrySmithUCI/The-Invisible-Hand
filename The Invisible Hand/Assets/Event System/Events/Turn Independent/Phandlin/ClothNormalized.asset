@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: 1.0 Lich
+  m_Name: ClothNormalized
   m_EditorClassIdentifier: 
-  title: 
+  title: Cloth prices normalized
   textEvents:
   - toDisplay: []
     extraToDisplay:
@@ -20,22 +20,18 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: 
-  redirectEvents:
-  - eventObject: {fileID: 0}
-    name: 
-    value: 0
+    text: The price of cloth has normalized after the phandalin incident.
+  redirectEvents: []
   setUpNewEvent:
     eventObject: {fileID: 0}
     name: 
     value: 0
   assignedQuest: {fileID: 0}
-  effects: []
+  effects:
+  - resourceName: Cloth Price
+    amount: -1
   prerequisites: []
-  connectedOptions:
-  - eventObject: {fileID: 0}
-    name: 
-    value: 0
+  connectedOptions: []
   tint: {r: 0, g: 0, b: 0, a: 0}
   frontImage: {fileID: 0}
   onTooManyQuests: {fileID: 0}

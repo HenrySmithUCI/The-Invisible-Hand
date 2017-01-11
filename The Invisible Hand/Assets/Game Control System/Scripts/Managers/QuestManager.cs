@@ -28,17 +28,35 @@ public class QuestManager : Singleton<QuestManager> {
   }
 
   public void updateQuests() {
-    List<QuestObject> toRemove = new List<QuestObject>();
+    //List<QuestObject> toRemove = new List<QuestObject>();
 
     foreach(QuestObject qo in currentQuests) {
       qo.turnsToComplete -= 1;
-      if(qo.turnsToComplete <= 0) {
-        toRemove.Add(qo);
-      }
+      //if(qo.turnsToComplete <= 0) {
+      //  toRemove.Add(qo);
+      //}
     }
 
-    foreach(QuestObject qo in toRemove) {
-      currentQuests.Remove(qo);
-    }
+    //foreach(QuestObject qo in toRemove) {
+    //  currentQuests.Remove(qo);
+    //}
   }
+
+    public void removeEndedQuests()
+    {
+        List<QuestObject> toRemove = new List<QuestObject>();
+
+        foreach (QuestObject qo in currentQuests)
+        {
+            if (qo.turnsToComplete <= 0)
+            {
+                toRemove.Add(qo);
+            }
+        }
+
+        foreach (QuestObject qo in toRemove)
+        {
+            currentQuests.Remove(qo);
+        }
+    }
 }

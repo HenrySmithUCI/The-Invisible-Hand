@@ -47,8 +47,7 @@ MonoBehaviour:
     name: "I\u2019m not sure I\u2019m ready Ander."
     value: 0
   - eventObject: {fileID: 11400000, guid: b773f97682c92d84ead04f4507d08110, type: 2}
-    name: "Don\u2019t worry Ander, you\u2019ll come back to a more successful shop
-      than you could even dream of"
+    name: "Don\u2019t worry, I'll be the best shop owner ever!"
     value: 0
   tint: {r: 0, g: 0, b: 0, a: 0}
   frontImage: {fileID: 0}

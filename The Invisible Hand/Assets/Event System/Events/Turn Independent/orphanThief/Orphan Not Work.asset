@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: OrphanScold
+  m_Name: Orphan Not Work
   m_EditorClassIdentifier: 
-  title: You confronted the orphan
+  title: Strange Child
   textEvents:
   - toDisplay: []
     extraToDisplay:
@@ -20,20 +20,15 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: She drops the loaf out of her shirt and looks completely petrified. She
-      apparently gets over it quite quickly though, because she picks the bread up
-      again and sprints from the store before you have a chance to grab her
+    text: A young girl suspiciously wanders your store but leaves without touching
+      anything. Strange.
   redirectEvents: []
   setUpNewEvent:
     eventObject: {fileID: 0}
     name: 
     value: 0
   assignedQuest: {fileID: 0}
-  effects:
-  - resourceName: Reputation
-    amount: -1
-  - resourceName: Apple
-    amount: 1
+  effects: []
   prerequisites: []
   connectedOptions: []
   tint: {r: 0, g: 0, b: 0, a: 0}

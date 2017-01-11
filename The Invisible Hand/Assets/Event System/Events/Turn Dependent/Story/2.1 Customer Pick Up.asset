@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: FariesStart
+  m_Name: 2.1 Customer Pick Up
   m_EditorClassIdentifier: 
-  title: An Enormous Man Enters
+  title: Your First Customer
   textEvents:
   - toDisplay: []
     extraToDisplay:
@@ -20,10 +20,8 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: An enormous man walks into your store one day, covered head-to-toe in heavy,
-      concealing robes. He reminds you a bit of the wizards from ancient myths, men
-      who could sling magic from their bare hands at a whim with no preparation or
-      ingredients necessary.
+    text: Still reeling from this news, a customer walks. He's the local blacksmith,
+      a family friend. He's the one who ordered the wood and apple.
   - toDisplay: []
     extraToDisplay:
       resourceName: 
@@ -31,32 +29,36 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: "He enters silently, and you probably wouldn\u2019t have noticed him enter
-      the store if not for the bell on the front door. He approaches the counter slowly,
-      and you\u2019re alarmed to see a near-perfect, alabaster face staring down at
-      you. "
-  - toDisplay: []
+    text: '"Hey, bud." He tries to sustain a fake grin. "Look," He drops the smile,
+      "you and your brother are good boys. And your brother is doing a great service
+      keeping us safe. Your going to do fine without him."'
+  - toDisplay:
+    - resourceName: Wood
+      amount: 1
+    - resourceName: Apple
+      amount: 1
     extraToDisplay:
       resourceName: 
       amount: 0
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: "The angel speaks before you can call for help or express your alarm, and
-      his voice soothes you as he says \u201CI would like to buy all of your fairies\u201D."
+    text: '"But you know, I did place an order here a while ago, did you get it for
+      me lad?"'
   redirectEvents: []
   setUpNewEvent:
     eventObject: {fileID: 0}
     name: 
     value: 0
-  assignedQuest: {fileID: 0}
+  assignedQuest: {fileID: 11400000, guid: 1f6dd9e6b844074419063e06011801f2, type: 2}
   effects: []
-  prerequisites:
-  - resourceName: Fairy
-    amount: 1
+  prerequisites: []
   connectedOptions:
-  - eventObject: {fileID: 11400000, guid: 296d9ba920640154bad1bcf3682e30d7, type: 2}
-    name: '...Yes of course...'
+  - eventObject: {fileID: 11400000, guid: 41a7dff9010aab34ba0674516735b472, type: 2}
+    name: Yes!
+    value: 0
+  - eventObject: {fileID: 11400000, guid: a99c104fdc50d474f9cb0299daaebb2d, type: 2}
+    name: No...
     value: 0
   tint: {r: 0, g: 0, b: 0, a: 0}
   frontImage: {fileID: 0}

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: OrphanScold
+  m_Name: 2.4 Event final
   m_EditorClassIdentifier: 
-  title: You confronted the orphan
+  title: The Blacksmith Leaves
   textEvents:
   - toDisplay: []
     extraToDisplay:
@@ -20,9 +20,8 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: She drops the loaf out of her shirt and looks completely petrified. She
-      apparently gets over it quite quickly though, because she picks the bread up
-      again and sprints from the store before you have a chance to grab her
+    text: And with that, the blacksmith leaves the shop. You ponder how you will ever
+      make 5000 gold in just 15 days.
   redirectEvents: []
   setUpNewEvent:
     eventObject: {fileID: 0}
@@ -30,10 +29,8 @@ MonoBehaviour:
     value: 0
   assignedQuest: {fileID: 0}
   effects:
-  - resourceName: Reputation
-    amount: -1
-  - resourceName: Apple
-    amount: 1
+  - resourceName: Gold
+    amount: 300
   prerequisites: []
   connectedOptions: []
   tint: {r: 0, g: 0, b: 0, a: 0}

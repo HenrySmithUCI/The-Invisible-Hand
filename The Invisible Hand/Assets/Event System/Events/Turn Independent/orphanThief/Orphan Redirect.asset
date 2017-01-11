@@ -9,35 +9,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: Market Upgrade 1
+  m_Name: Orphan Redirect
   m_EditorClassIdentifier: 
-  title: 'News: Market Upgrade'
-  textEvents:
-  - toDisplay:
-    - resourceName: Cloth
-      amount: 1
-    - resourceName: Herb
-      amount: 1
-    extraToDisplay:
-      resourceName: 
-      amount: 0
-    extraToDisplay2:
-      resourceName: 
-      amount: 0
-    text: You read the news. "Due to popular demand, Cloth and Herbs will now be available
-      from the town market. This change is predicted to give more flexibility to local
-      consumers."
-  redirectEvents: []
+  title: 
+  textEvents: []
+  redirectEvents:
+  - eventObject: {fileID: 11400000, guid: 9880521bc695e2a4d9de4557e7d7b819, type: 2}
+    name: 
+    value: 0
+  - eventObject: {fileID: 11400000, guid: aeb00f56d711a3143b2e9515c462bfeb, type: 2}
+    name: 
+    value: 0
   setUpNewEvent:
     eventObject: {fileID: 0}
     name: 
     value: 0
   assignedQuest: {fileID: 0}
-  effects:
-  - resourceName: Cloth Available
-    amount: 1
-  - resourceName: Herb Available
-    amount: 1
+  effects: []
   prerequisites: []
   connectedOptions: []
   tint: {r: 0, g: 0, b: 0, a: 0}
