@@ -51,7 +51,7 @@ public class EventStorage : Singleton<EventStorage>
 
         List<EventObject> extraEvents = new List<EventObject>();
 
-        if (turnIndependentEvents.Count > 0)
+        if (turnIndependentEvents.Count > 0 && maxEvents > 0 && UnityEngine.Random.Range(0,2) == 1)
         {
             extraEvents.Add(ExtractEvent());
         }

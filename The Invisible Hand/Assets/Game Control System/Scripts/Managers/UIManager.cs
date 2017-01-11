@@ -77,7 +77,7 @@ public class UIManager : Singleton<UIManager> {
       //if (CostManager.Instance.availableResources.Contains(rd.resource) || rd.resource == "Gold") {
         rd.display = true;
         if (rd.resource != "") {
-          rd.amount = Mathf.FloorToInt(ResourceStorage.Instance.checkResource(rd.resource));
+          rd.amount = Mathf.FloorToInt(ResourceStorage.Instance.checkResource(rd.resource) + ResourceStorage.Instance.checkResource(rd.resource + " Bundled"));
         }
       //}
       //else {

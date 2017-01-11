@@ -423,19 +423,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storage:
   - resourceName: Gold
-    amount: 1000
+    amount: 0
   - resourceName: Wood
-    amount: 2
+    amount: 0
   - resourceName: Stone
     amount: 0
   - resourceName: Steel
-    amount: 5
+    amount: 0
   - resourceName: Cloth
     amount: 0
   - resourceName: Leather
-    amount: 1
+    amount: 0
   - resourceName: Apple
-    amount: 4
+    amount: 0
   - resourceName: Herb
     amount: 0
   - resourceName: Fairy
@@ -474,7 +474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnDependentEvents:
-  - events: []
+  - events:
+    - {fileID: 11400000, guid: d4e46a0d9eb4f654bb3d999e84cf9057, type: 2}
   - events: []
   - events:
     - {fileID: 11400000, guid: a0f4a756130444946a7c611f1802abd0, type: 2}

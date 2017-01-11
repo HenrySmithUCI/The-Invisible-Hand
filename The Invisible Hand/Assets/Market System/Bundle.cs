@@ -109,10 +109,10 @@ public class Bundle
     private float priceModify(float price)
     {
         // numbers gotten after playing around in desmos for a while for a good curve
-        float power = 0.59f;
+        float power = 0.5f;
         float multiplyer = 33.4f;
         float xShift = Mathf.Pow(multiplyer * power, 1f / (1f - power));
-        float yShift = (Mathf.Pow(xShift, power) * multiplyer) + 4f; // +2 so there is some discount even at low levels
+        float yShift = (Mathf.Pow(xShift, power) * multiplyer) + 4f; // +4 so there is some discount even at low levels
 
         return (Mathf.Pow(price + xShift, power) * multiplyer) - yShift;
     }

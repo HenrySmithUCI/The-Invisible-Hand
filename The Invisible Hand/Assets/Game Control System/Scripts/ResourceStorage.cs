@@ -37,7 +37,8 @@ public class ResourceStorage : Singleton<ResourceStorage> {
       }
     }
 
-    throw new noResourceFoundError();
+        //throw new noResourceFoundError();
+        return 0;
   }
 
   public bool isResourceStored(string value) {

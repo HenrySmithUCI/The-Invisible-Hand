@@ -122,6 +122,10 @@ public class EventManager : Singleton<EventManager> {
     }
 
   public int getNumberOfEvents(int turn) {
+        if (turn < 2)
+        {
+            return 0;
+        }
     return 3;
   }
 }

@@ -9,10 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
-  m_Name: Market Upgrade 3
+  m_Name: 1.4 Continue
   m_EditorClassIdentifier: 
-  title: 'News: Market Upgrade'
+  title: Your Brother is Leaving
   textEvents:
+  - toDisplay:
+    - resourceName: Gold
+      amount: 32
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: '"You''ll need this gold. And remember, you''ll need to buy from both the
+      raw resource market and from resource bundles to make the most out of your gold."'
   - toDisplay: []
     extraToDisplay:
       resourceName: 
@@ -20,39 +31,24 @@ MonoBehaviour:
     extraToDisplay2:
       resourceName: 
       amount: 0
-    text: You read the news. "The Guild of the Invisible Hand released a statement
-      today expressing their greif over the tragic loss Senator Ironbeard of the mining
-      district."
-  - toDisplay: []
-    extraToDisplay:
-      resourceName: 
-      amount: 0
-    extraToDisplay2:
-      resourceName: 
-      amount: 0
-    text: '"A guild representative could even be seen twirling his mustache in sadness."'
-  - toDisplay: []
-    extraToDisplay:
-      resourceName: 
-      amount: 0
-    extraToDisplay2:
-      resourceName: 
-      amount: 0
-    text: '"It''s safe to say now that the district''s strict regulations on steel
-      exports will be lifted. Steel is now available in the market."'
+    text: "You clasp your brother\u2019s hand and pull him in for a long hug. He slaps
+      you on the back, pulls out of the hug, and then opens the door. He pauses on
+      the threshold, and after a moment turns and nods your way. He steps outside
+      before you have a chance to say anything else, and you finish closing up the
+      store for the day."
   redirectEvents: []
   setUpNewEvent:
     eventObject: {fileID: 0}
     name: 
     value: 0
-  assignedQuest: {fileID: 0}
+  assignedQuest: {fileID: 11400000, guid: 97e7753192133ae4cbe6f632cf489f92, type: 2}
   effects:
-  - resourceName: Steel Available
-    amount: 1
+  - resourceName: Gold
+    amount: 32
   prerequisites: []
   connectedOptions: []
   tint: {r: 0, g: 0, b: 0, a: 0}
-  frontImage: {fileID: 0}
+  frontImage: {fileID: 21300000, guid: 39c7362d89a892e429204625d80b2f1b, type: 3}
   onTooManyQuests: {fileID: 0}
   randomQuest: 0
   randomSell: 0
