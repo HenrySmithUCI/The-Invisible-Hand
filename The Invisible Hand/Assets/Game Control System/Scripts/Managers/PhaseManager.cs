@@ -20,7 +20,10 @@ public class PhaseManager : Singleton<PhaseManager> {
     SceneManager.sceneLoaded += delegate { UIManager.Instance.changeScene(SceneManager.GetActiveScene().name); };
     SceneManager.sceneLoaded += delegate { StartCoroutine(this.fadeIn(SceneManager.GetActiveScene().name)); };
     turn = 0;
-    updateData();
+        updateData();
+    if (fadeImage.gameObject.activeInHierarchy == false) {
+      fadeImage.gameObject.SetActive(true);
+    }
     SceneManager.LoadScene(startPhase);
   }
   
@@ -34,6 +37,7 @@ public class PhaseManager : Singleton<PhaseManager> {
   }
 
   public IEnumerator fadeOut(string phase) {
+    fadeImage.gameObject.SetActive(true);
     float t = 0f;
 
     while(t < 1f) {
@@ -57,14 +61,17 @@ public class PhaseManager : Singleton<PhaseManager> {
       fadeImage.color = c;
       yield return 0;
     }
+
+    fadeImage.gameObject.SetActive(false);
   }
 
   public void updateData() {
+        CostManager.Instance.updateCosts();
     BundleManager.Instance.completeAllBuys();
     EventManager.Instance.makeCurrentEventList(turn);
     QuestManager.Instance.updateQuests();
     UIManager.Instance.updateTurn();
-  }
+    }
 
   public void nextTurn() {
     turn++;

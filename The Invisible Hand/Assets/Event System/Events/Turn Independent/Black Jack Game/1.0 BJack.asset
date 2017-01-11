@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: 1.0 BJack
+  m_EditorClassIdentifier: 
+  title: A Gambler Walks In
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: A tall man in a wide brim hat passes through the doors and up to the front
+      counter. He Leans against it's surface and says "You look like one for a bet,
+      boy."
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: He pulls out two bells and hands one to you. "Blind Black Jack. We each
+      draw cards between 1 and 10 and and that number to our total. The cards go back
+      in the deck so we have to keep track of our total mentally. Highest total wins,
+      but if either of us get over 21, we bust and automatically lose."
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: '"That''s what this bell is for, see. It rings when you bust. And at the
+      end of the game it rings if you have the higher total, meanin'' you won. Got
+      it all, kid?"'
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 0}
+  effects: []
+  prerequisites: []
+  connectedOptions:
+  - eventObject: {fileID: 11400000, guid: 1e0affa14608a1544aff12ab1bddcc2a, type: 2}
+    name: Sure, and I'll bet 100 Gold
+    value: 0
+  - eventObject: {fileID: 11400000, guid: 65e56c282bd33b04fa401b69bd264d83, type: 2}
+    name: Sure, and I'll bet 10 Gold
+    value: 0
+  - eventObject: {fileID: 11400000, guid: b3a61679c8962ab4f8affafdacb81307, type: 2}
+    name: No, and I don't want to gamble
+    value: 0
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0

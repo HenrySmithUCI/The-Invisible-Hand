@@ -33,7 +33,7 @@ public class DisplayBundle : MonoBehaviour {
 
     if (BundleManager.Instance.toBuy.Contains(bundle)) {
       check.SetActive(true);
-      buyButton.GetComponentInChildren<Text>().text = "Bought";
+      buyButton.GetComponentInChildren<Text>().text = "UnBuy";
     }
     else {
       check.SetActive(false);
@@ -42,7 +42,7 @@ public class DisplayBundle : MonoBehaviour {
         buyButton.GetComponent<Button>().interactable = true;
       }
       else {
-        buyButton.GetComponentInChildren<Text>().text = "Too Expensive";
+        buyButton.GetComponentInChildren<Text>().text = "Expensive!";
         buyButton.GetComponent<Button>().interactable = false;
       }
     }

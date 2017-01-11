@@ -22,13 +22,9 @@ public class QuestManager : Singleton<QuestManager> {
       throw new TooManyQuestsException();
     }
     qo.turnsToComplete = qo.maxTurns;
-    try {
-      EventStorage.Instance.turnDependentEvents[PhaseManager.Instance.Turn + qo.maxTurns].events.Add(qo.OnQuestEnd);
-    }
-    catch(System.IndexOutOfRangeException) {
-
-    }
-    currentQuests.Add(qo);
+        EventObject.EventGroup eg = new EventObject.EventGroup(qo.OnQuestEnd, qo.maxTurns);
+        EventManager.Instance.addTurnEvent(eg);
+        currentQuests.Add(qo);
   }
 
   public void updateQuests() {

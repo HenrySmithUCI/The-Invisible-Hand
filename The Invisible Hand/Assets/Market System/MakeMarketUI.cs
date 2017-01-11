@@ -17,7 +17,7 @@ public class MakeMarketUI : MonoBehaviour {
       string resource = CostManager.Instance.availableResources[i];
       RectTransform rt = Instantiate(resourceButtonPrefab).GetComponent<RectTransform>();
 
-      Vector2 trCorner = new Vector2(0.13f, 0.88f);
+      Vector2 trCorner = new Vector2(0.13f, 0.87f);
       Vector2 rectSize = new Vector2(0.33f, 0.07f);
       float spacer = 0.02f;
 
@@ -65,7 +65,7 @@ public class MakeMarketUI : MonoBehaviour {
     for(int i = 0; i < BundleManager.Instance.availableBundles.Count; i++) {
       RectTransform rt = Instantiate(bundleButtonPrefab).GetComponent<RectTransform>();
 
-      Vector2 trCorner = new Vector2(0.50f, 0.88f);
+      Vector2 trCorner = new Vector2(0.50f, 0.87f);
       float spacer = 0.02f;
       Vector2 rectSize = new Vector2(0.2f, 0.15f);
       int bundlesPerRow = 5;

@@ -18,14 +18,13 @@ public class EventStorage : Singleton<EventStorage>
 {
     protected EventStorage() { }
 
-    public EventListObject[] turnDependentEvents;
+    public List<EventListObject> turnDependentEvents;
     public List<EventObject> turnIndependentEvents;
+    public List<EventObject> endlessEventPool;
+    public EventObject defaultEvent;
 
     private EventObject ExtractEvent()
     {
-        if(turnIndependentEvents.Count == 0) {
-            throw new NotEnoughEventsException();
-        }
         int index = UnityEngine.Random.Range(0, turnIndependentEvents.Count - 1); //will need to be modified if we decide to add weights to ti events
         EventObject Event = turnIndependentEvents[index];
         turnIndependentEvents.Remove(Event); //NOTE: This method REMOVES a Event object from the turnIndependentEvents member variable
@@ -34,28 +33,37 @@ public class EventStorage : Singleton<EventStorage>
 
 
     }
+    public EventObject randomFromPool()
+    {
+        return endlessEventPool[UnityEngine.Random.Range(0, endlessEventPool.Count)];
+    }
 
     public List<EventObject> GetEventSet(int turn, int maxEvents)
     {
 
         List<EventObject> reqEvents;
-        if (turn < turnDependentEvents.Length) {
+        if (turn < turnDependentEvents.Count) {
            reqEvents = new List<EventObject>(turnDependentEvents[turn].events); //should be a deep copy
         }
         else {
           reqEvents = new List<EventObject>();
         }
-    
-        if (maxEvents > reqEvents.Count)
+
+        List<EventObject> extraEvents = new List<EventObject>();
+
+        if (turnIndependentEvents.Count > 0)
         {
-            List<EventObject> nonReqEvents = new List<EventObject>();
-            for (int i = 0; i < maxEvents - reqEvents.Count; i++)
-            {
-                nonReqEvents.Add(ExtractEvent());
-            }
-            reqEvents.AddRange(nonReqEvents);
+            extraEvents.Add(ExtractEvent());
         }
 
+        if(endlessEventPool.Count > 0)
+        {
+            while(maxEvents - extraEvents.Count > 0)
+            {
+                extraEvents.Add(randomFromPool());
+            }
+        }
+        reqEvents.AddRange(extraEvents);
         return reqEvents;
 
 
