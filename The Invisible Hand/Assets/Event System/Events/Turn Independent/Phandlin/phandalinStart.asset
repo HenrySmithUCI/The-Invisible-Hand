@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: phandalinStart
+  m_EditorClassIdentifier: 
+  title: Mishap in phandalin
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "You grab the newspaper off of your porch in the morning, quickly scanning
+      the pages to see if there\u2019s anything important happening that you need
+      to know about. None of the articles seem particularly interesting, but you notice
+      Phandalin, the major cotton producer for the city, mentioned in an article about
+      a criminal. "
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: ' Upon closer inspection, you learn that Phandalin has been turned to pure
+      obsidian using a powerful gauntlet, just one of a series of atrocities committed
+      by the young man whose picture appears in the article.'
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "You make a mental note of it, because if Phandalin is gone, it means cotton
+      will rise in price rather drastically. This, in turn, will hike the price of
+      cloth, which could be a bit of a problem. It\u2019s a good thing you bothered
+      to actually read the news today."
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: You predict cloth prices will rise drastically a few days from this event
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 11400000, guid: 177cdadbff4404e48a2279ac9d5cd137, type: 2}
+    name: 
+    value: 2
+  assignedQuest: {fileID: 0}
+  effects: []
+  prerequisites: []
+  connectedOptions: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0
