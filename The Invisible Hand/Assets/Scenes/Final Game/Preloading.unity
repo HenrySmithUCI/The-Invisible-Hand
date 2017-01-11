@@ -100,7 +100,7 @@ Prefab:
     - target: {fileID: 114000012920117318, guid: e90309b6ae9e96845a4b1b97eba84b1e,
         type: 2}
       propertyPath: turnIndependentEvents.Array.size
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4000010383212980, guid: e90309b6ae9e96845a4b1b97eba84b1e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -169,6 +169,18 @@ Prefab:
       propertyPath: turnIndependentEvents.Array.data[8]
       value: 
       objectReference: {fileID: 11400000, guid: 9595870415177804087931921573f3cf,
+        type: 2}
+    - target: {fileID: 114000012920117318, guid: e90309b6ae9e96845a4b1b97eba84b1e,
+        type: 2}
+      propertyPath: turnIndependentEvents.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9880521bc695e2a4d9de4557e7d7b819,
+        type: 2}
+    - target: {fileID: 114000012920117318, guid: e90309b6ae9e96845a4b1b97eba84b1e,
+        type: 2}
+      propertyPath: turnIndependentEvents.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: d0adba97550c5134dbd75d3c08148739,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e90309b6ae9e96845a4b1b97eba84b1e, type: 2}
