@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿/*
+using UnityEngine;
 using System.Collections;
 using UnityEditor;
 using System.IO;
@@ -14,6 +15,7 @@ using System.IO;
  * 
  * 
  * */
+ /*
 public class saveTest : MonoBehaviour {
   
 
@@ -100,3 +102,4 @@ public class saveTest : MonoBehaviour {
 	
 	}
 }
+*/

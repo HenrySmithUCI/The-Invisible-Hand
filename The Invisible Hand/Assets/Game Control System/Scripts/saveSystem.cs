@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿/*
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -28,6 +29,7 @@ using UnityEditor;
  * 
  * 
  * */
+ /*
 [System.Serializable]
 public abstract class saveGame
 {
@@ -86,6 +88,6 @@ public class saveSystem
 
 
 }
-
+*/
 
 
