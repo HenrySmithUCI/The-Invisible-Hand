@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: Start1.0
+  m_EditorClassIdentifier: 
+  title: A lich walks in and buys groceries
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "You\u2019re managing the store during a particularly busy rush, and you
+      turn away from the\r\nmain floor for a moment to check whether you have any
+      cumin behind the counter. When you turn back, there is an impeccably dressed
+      man standing at the counter. He\u2019s not one of your regular customers, and
+      you don\u2019t recall seeing him in the store before you turned around, but
+      he\u2019s patiently waiting at the counter so you ask \u201Cif you\u2019ll give
+      me just one minute, I\u2019ll be right with you sir\u201D."
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: You finish helping the customer who requested the cumin, and then you turn
+      to the well-dressed man, who is already ready to speak with you.
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "\u201CHow can I help you today sir?\u201D you ask him, running your hands
+      across your apron to\r\nsmooth out any wrinkles while you have a moment to breathe.
+      He flashes you a perfect smile and responds \u201CI was hoping I would be able
+      to make you an offer. I\u2019m a local businessman, you see, and I was hoping
+      to acquire a few shipments of food. I have a some fairies in stock that I would
+      be willing to offer in exchange, and I can assure you it would be quite the
+      deal."
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: "You think about it for a moment, unsure who in their right mind would want
+      to trade\r\nvaluable fairies for simple food shipments. The fairy poaching market
+      was quite large, so it\u2019s possible he gained them through illicit means
+      and now wants to hawk the off for a more legitimate product. You find yourself
+      somewhat disarmed by his charisma though, and consider the offer carefully."
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 0}
+  effects: []
+  prerequisites: []
+  connectedOptions:
+  - eventObject: {fileID: 11400000, guid: 4fd8c223022b4394ca34efaf2ba506b8, type: 2}
+    name: '"Sure, I accept" '
+    value: 0
+  - eventObject: {fileID: 0}
+    name: Refuse this deal
+    value: 0
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0
