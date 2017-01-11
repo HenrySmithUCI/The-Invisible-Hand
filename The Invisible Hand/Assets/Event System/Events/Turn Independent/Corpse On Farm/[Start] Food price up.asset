@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: '[Start] Food price up'
+  m_EditorClassIdentifier: 
+  title: News
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: 'You read the news. "Food prices skyrocket due to mysterious farm deaths:
+      Several farmers have been found dead. This has caused a panic over fear of contaminated
+      food which has lead to a spike in the price of uncontaminated products."'
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: Food is now twice as expensive.
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 11400000, guid: dbd22c66bdd5eb745b891e7e8f06b4cf, type: 2}
+    name: 
+    value: 2
+  assignedQuest: {fileID: 0}
+  effects:
+  - resourceName: Apple Price
+    amount: 1
+  prerequisites: []
+  connectedOptions: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0

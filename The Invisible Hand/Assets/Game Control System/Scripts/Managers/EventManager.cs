@@ -10,8 +10,15 @@ public class EventManager : Singleton<EventManager> {
 
   public void makeCurrentEventList(int turn) {
     currentEventList.Clear();
-    currentEventList = EventStorage.Instance.GetEventSet(turn, getNumberOfEvents(turn));
-    currentEventList = Shuffle.shuffle<EventObject>(currentEventList);
+
+    try {
+      currentEventList = EventStorage.Instance.GetEventSet(turn, getNumberOfEvents(turn));
+    }
+    catch (NotEnoughEventsException) {
+      currentEventList.Add(EventStorage.Instance.defaultEvent);
+    }
+
+    currentEventList = Shuffle.shuffle(currentEventList);
   }
 
   public static EventObject getRandomEventFromProbabilities(EventObject.EventGroup[] events) {
@@ -44,8 +51,17 @@ public class EventManager : Singleton<EventManager> {
   }
 
   public void activateEvent(EventObject eo) {
-    currentEvent = eo;
-    foreach (ResourceAmount r in eo.effects) {
+        currentEvent = eo;
+        if (eo.randomBuy)
+        {
+            activateEvent(RandomEventGenerator.makeBuy());
+        }
+
+        if (eo.randomSell)
+        {
+            activateEvent(RandomEventGenerator.makeSell());
+        }
+        foreach (ResourceAmount r in eo.effects) {
       ResourceStorage.Instance.addResource(r.resourceName, r.amount);
     }
 
@@ -58,20 +74,21 @@ public class EventManager : Singleton<EventManager> {
       }
     }
 
-    if (eo.setUpNewEvent.eventObject != null) {
-      try {
-        EventStorage.Instance.turnDependentEvents[PhaseManager.Instance.Turn + eo.setUpNewEvent.value].events.Add(eo.setUpNewEvent.eventObject);
-      }
-      catch (System.IndexOutOfRangeException) {
-      }
+    if (eo.setUpNewEvent != null && eo.setUpNewEvent.eventObject != null) {
+            addTurnEvent(eo.setUpNewEvent);
     }
 
     List<EventObject.EventGroup> availableEvents = new List<EventObject.EventGroup>();
-    foreach (EventObject.EventGroup e in eo.redirectEvents) {
-      if (e.eventObject.matchesPrerequisites()) {
-        availableEvents.Add(e);
-      }
-    }
+        if (eo.redirectEvents != null)
+        {
+            foreach (EventObject.EventGroup e in eo.redirectEvents)
+            {
+                if (e.eventObject.matchesPrerequisites())
+                {
+                    availableEvents.Add(e);
+                }
+            }
+        }
 
     if (availableEvents.Count > 0) {
       EventObject newEO = getRandomEventFromProbabilities(availableEvents.ToArray());
@@ -83,7 +100,28 @@ public class EventManager : Singleton<EventManager> {
     UIManager.Instance.updateAll();
   }
 
+    public void addTurnEvent(EventObject.EventGroup eo)
+    {
+        try
+        {
+            EventStorage.Instance.turnDependentEvents[PhaseManager.Instance.Turn + eo.value].events.Add(eo.eventObject);
+        }
+        catch (System.ArgumentOutOfRangeException)
+        {
+            EventListObject elo = new EventListObject();
+            elo.events = new List<EventObject>();
+            elo.events.Add(eo.eventObject);
+            for (int i = 0; i < eo.value - 1; i++)
+            {
+                EventListObject tempElo = new EventListObject();
+                tempElo.events = new List<EventObject>();
+                EventStorage.Instance.turnDependentEvents.Add(tempElo);
+            }
+            EventStorage.Instance.turnDependentEvents.Insert(PhaseManager.Instance.Turn + eo.value, elo);
+        }
+    }
+
   public int getNumberOfEvents(int turn) {
-    return 1;
+    return 3;
   }
 }

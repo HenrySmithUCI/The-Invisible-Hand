@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: 1.1 Accept
+  m_EditorClassIdentifier: 
+  title: Quest Accepted
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: '"Oh bless you! I had heard your brother was off to war as well, so I thank
+      you for your understanding." She turns around and slowly steps out.'
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 11400000, guid: 7994209af72e4644b9a9ea3c9000c21c, type: 2}
+  effects: []
+  prerequisites: []
+  connectedOptions: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 11400000, guid: 30e54077afb68c146ae28ae1175cd2cc, type: 2}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0

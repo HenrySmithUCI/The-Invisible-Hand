@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: End Soldier Quest Fail
+  m_EditorClassIdentifier: 
+  title: Quest Failed
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: Visibly enraged, the man grabs you by your collar.
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: '"Boy, we were counting on that shipment! Now how are we going to defend
+      the mines?!?"'
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: He puts you down, scowls at you, and leaves the store.
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 11400000, guid: 75f1066fe24ffb847958a38c95ce2e02, type: 2}
+    name: 
+    value: 1
+  assignedQuest: {fileID: 0}
+  effects: []
+  prerequisites: []
+  connectedOptions: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0

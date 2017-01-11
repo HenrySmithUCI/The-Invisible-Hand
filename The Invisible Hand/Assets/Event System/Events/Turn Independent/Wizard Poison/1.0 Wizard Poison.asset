@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: 1.0 Wizard Poison
+  m_EditorClassIdentifier: 
+  title: News
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: During a rather long lull of customers, you take the time to read the city
+      news for the day, and are startled at news that the entire population of a nearby
+      village has been poisoned.
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: The well known cooking wizard Taako, host of the traveling cooking show
+      "Sizzle It Up with Taako," is currently the lead suspect after viewers dropped
+      dead after eating chicken transmuted by the wizard.
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: As everyone is in shock at this development, the price of herbs and food
+      has dropped substantially.
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 0}
+    name: 
+    value: 0
+  assignedQuest: {fileID: 0}
+  effects:
+  - resourceName: Apple Price
+    amount: -0.5
+  - resourceName: Herb Price
+    amount: -0.5
+  prerequisites: []
+  connectedOptions: []
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0

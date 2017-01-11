@@ -74,15 +74,15 @@ public class UIManager : Singleton<UIManager> {
 
     for(int i = 0; i < resourceBox.childCount; i++) {
       ResourceDisplay rd = resourceBox.GetChild(i).GetComponent<ResourceDisplay>();
-      if (CostManager.Instance.availableResources.Contains(rd.resource) || rd.resource == "Gold") {
+      //if (CostManager.Instance.availableResources.Contains(rd.resource) || rd.resource == "Gold") {
         rd.display = true;
         if (rd.resource != "") {
           rd.amount = Mathf.FloorToInt(ResourceStorage.Instance.checkResource(rd.resource));
         }
-      }
-      else {
-        rd.display = false;
-      }
+      //}
+      //else {
+      //  rd.display = false;
+      //}
       rd.updateDisplay();
     }
   }

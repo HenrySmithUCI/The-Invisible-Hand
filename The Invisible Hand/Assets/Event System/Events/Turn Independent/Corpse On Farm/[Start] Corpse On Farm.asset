@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6be49643d97d943866e8b52a582755, type: 3}
+  m_Name: '[Start] Corpse On Farm'
+  m_EditorClassIdentifier: 
+  title: Shop
+  textEvents:
+  - toDisplay: []
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: 
+      amount: 0
+    text: A young boy walks into the shop, clearly dressed to the best of his ability.
+      His slightly worn-out shoes are well polished, his jacket is pressed, with a
+      small patch on one of the elbows, and his hair is parted neatly down the center.
+  - toDisplay:
+    - resourceName: Apple
+      amount: -1
+    extraToDisplay:
+      resourceName: 
+      amount: 0
+    extraToDisplay2:
+      resourceName: Gold
+      amount: 15
+    text: "He says \u201CExcuse me sir, but I was told to order as much of your food
+      as possible for delivery to Lord Hethrenow, and pay you handsomely for each
+      shipment\u201D."
+  redirectEvents: []
+  setUpNewEvent:
+    eventObject: {fileID: 11400000, guid: d0d876b2a2bfde748bfc13f3a6de8e9d, type: 2}
+    name: 
+    value: 1
+  assignedQuest: {fileID: 0}
+  effects: []
+  prerequisites: []
+  connectedOptions:
+  - eventObject: {fileID: 11400000, guid: 1ba2c0ce2f400874aa109d8b5ee718f6, type: 2}
+    name: Of course, here's an apple.
+    value: 0
+  - eventObject: {fileID: 11400000, guid: 027150d696dac3647838ec5c5669ef78, type: 2}
+    name: I can't give you anything.
+    value: 0
+  - eventObject: {fileID: 11400000, guid: d4f4869809d05c54a895b7f719b45c60, type: 2}
+    name: And why is that?
+    value: 0
+  tint: {r: 0, g: 0, b: 0, a: 0}
+  frontImage: {fileID: 0}
+  onTooManyQuests: {fileID: 0}
+  randomQuest: 0
+  randomSell: 0
+  randomBuy: 0
