@@ -29,16 +29,25 @@ public class BundleManager : Singleton<BundleManager> {
 
   public void setToBuy(Bundle bundle) {
     if (isBuyable(bundle)) {
-      toBuy.Add(bundle);
+            foreach (string key in bundle.bundle.Keys)
+            {
+                ResourceStorage.Instance.addResource(key + " Bundled", bundle.bundle[key]);
+            }
+            toBuy.Add(bundle);
       ResourceStorage.Instance.addResource("Gold", -bundle.totalPrice);
     }
   }
 
   public void undoBuy(Bundle bundle) {
     if (toBuy.Contains(bundle)) {
+            foreach(string key in bundle.bundle.Keys)
+            {
+                ResourceStorage.Instance.addResource(key + " Bundled", -1 * bundle.bundle[key]);
+            }
       toBuy.Remove(bundle);
       ResourceStorage.Instance.addResource("Gold", bundle.totalPrice);
-    }
+            
+        }
   }
 
   public void completeAllBuys() {
@@ -50,7 +59,8 @@ public class BundleManager : Singleton<BundleManager> {
   public void completeBuyBundle(Bundle bundle) {
     foreach(string key in bundle.bundle.Keys) {
       ResourceStorage.Instance.addResource(key, bundle.bundle[key]);
-    }
+            ResourceStorage.Instance.addResource(key + " Bundled", -1 * bundle.bundle[key]);
+        }
   }
 
   public List<string> getResourceList(int turn, int bundleNumber) {
@@ -81,6 +91,6 @@ public class BundleManager : Singleton<BundleManager> {
       return 20;
     }
 
-    return Random.Range(30, 100);
+    return Random.Range((turn * 50) + 100, (turn * 100) + 100);
   }
 }

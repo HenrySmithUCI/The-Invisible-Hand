@@ -30,8 +30,10 @@ public class QuestDisplay : MonoBehaviour {
         new Rect(0,0,1,1), 
         cost.GetChild(i).GetComponent<RectTransform>());
     }
-
-        UIManager.Instance.makeResourceDisplay(quest.reward.resourceName, Mathf.CeilToInt(quest.reward.amount), new Rect(0, 0, 1, 1), reward);
+        if (quest.reward.resourceName != "")
+        {
+            UIManager.Instance.makeResourceDisplay(quest.reward.resourceName, Mathf.CeilToInt(quest.reward.amount), new Rect(0, 0, 1, 1), reward);
+        }
     UIManager.Instance.makeResourceDisplay("Turn", quest.turnsToComplete, new Rect(0,0,1,1), timer);
   }
 }
