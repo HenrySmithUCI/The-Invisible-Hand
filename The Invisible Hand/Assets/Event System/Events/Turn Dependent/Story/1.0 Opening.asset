@@ -44,7 +44,7 @@ MonoBehaviour:
     name: OK, sure
     value: 0
   - eventObject: {fileID: 11400000, guid: 3f443531e026d20458666fb52e5a8b0c, type: 2}
-    name: Consiter me familiarized
+    name: Consider me familiarized
     value: 0
   - eventObject: {fileID: 11400000, guid: 3f443531e026d20458666fb52e5a8b0c, type: 2}
     name: Absolutely
